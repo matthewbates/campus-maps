@@ -1,18 +1,34 @@
-import Select from "react-select";
+import { useState } from "react";
 
-import { DropdownContainer } from "./DropdownElements";
+import Select from "react-select";
 
 import { locations } from "../../utils/buildings";
 
 export const Dropdown = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const options = locations
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((location) => {
-      return { value: `${location.name}`, label: `${location.name}` };
+      return { label: `${location.name}`, value: `${location.name}` };
     });
+
+  const handleChange = () => {
+    setSelectedOption(selectedOption);
+  };
+
   return (
-    <DropdownContainer>
-      <Select options={options} />
-    </DropdownContainer>
+    <Select
+      options={options}
+      placeholder="Search..."
+      styles={{
+        control: (baseStyles) => ({
+          ...baseStyles,
+          width: "100%",
+          height: "4em",
+          cursor: "pointer",
+        }),
+      }}
+    />
   );
 };

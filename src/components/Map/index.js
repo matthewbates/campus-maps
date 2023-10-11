@@ -2,10 +2,13 @@ import React, { useCallback, useState } from "react";
 
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
+import { Marker } from "../Marker";
+
 import { containerStyle } from "../../utils/constants";
 
-export const Map = () => {
+export const Map = ({ displayMarkers, toggleSidebar }) => {
   const [map, setMap] = useState(null);
+
   const { isLoaded } = useJsApiLoader({
     id: "google-maps-script",
     googleMapsApiKey: "AIzaSyB480SbxWwFx84obwsruZkCeLBIgJOcEVY",
@@ -27,7 +30,7 @@ export const Map = () => {
       onUnmount={onUnmount}
       zoom={16}
     >
-      {/* child components go here */}
+      {displayMarkers && <Marker toggleSidebar={toggleSidebar} />}
     </GoogleMap>
   ) : (
     <></>
