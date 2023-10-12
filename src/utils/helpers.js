@@ -1,3 +1,5 @@
+import { locations } from "./buildings";
+
 // handles the search functionality for <Dropdown />
 export const handleLocationSearch = (locations) => {
   if (!Array.isArray(locations)) return null;
@@ -7,3 +9,10 @@ export const handleLocationSearch = (locations) => {
   );
   return result.length > 0 ? result[0] : null;
 };
+
+// alphabetizes and maps through the array of location objects
+export const options = locations
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((location) => {
+    return { label: `${location.name}`, value: `${location.name}` };
+  });

@@ -23,7 +23,11 @@ function App() {
     <div className="App">
       <Dropdown />
       <Toggle displayMarkers={displayMarkers} toggleDisplay={toggleDisplay} />
-      <Map displayMarkers={displayMarkers} toggleSidebar={toggleSidebar} />
+      <Map
+        displayMarkers={displayMarkers}
+        toggleSidebar={toggleSidebar}
+        isOpen={isOpen}
+      />
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
     </div>
   );

@@ -2,9 +2,9 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import { SidebarContainer } from "./SidebarElements";
 
-import { SidebarItems } from "../SidebarItems";
+import { SidebarItems } from "../SidebarItem";
 
-export const Sidebar = ({ isOpen, toggleSidebar }) => {
+export const Sidebar = ({ isOpen, toggleSidebar, location }) => {
   return (
     <SidebarContainer $isOpen={isOpen}>
       <ArrowBackIcon
@@ -16,6 +16,7 @@ export const Sidebar = ({ isOpen, toggleSidebar }) => {
           color: "#ffffff",
         }}
       />
+      <SidebarItems location={location} />
     </SidebarContainer>
   );
 };

@@ -6,7 +6,7 @@ import { Marker } from "../Marker";
 
 import { containerStyle } from "../../utils/constants";
 
-export const Map = ({ displayMarkers, toggleSidebar }) => {
+export const Map = ({ displayMarkers, toggleSidebar, isOpen }) => {
   const [map, setMap] = useState(null);
 
   const { isLoaded } = useJsApiLoader({
@@ -30,7 +30,9 @@ export const Map = ({ displayMarkers, toggleSidebar }) => {
       onUnmount={onUnmount}
       zoom={16}
     >
-      {displayMarkers && <Marker toggleSidebar={toggleSidebar} />}
+      {displayMarkers && (
+        <Marker toggleSidebar={toggleSidebar} isOpen={isOpen} />
+      )}
     </GoogleMap>
   ) : (
     <></>
