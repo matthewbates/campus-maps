@@ -1,4 +1,4 @@
-import { locations } from "./buildings";
+import { locations } from "./locations";
 
 // handles the search functionality for <Dropdown />
 export const handleLocationSearch = (locations) => {
@@ -16,3 +16,8 @@ export const options = locations
   .map((location) => {
     return { label: `${location.name}`, value: `${location.name}` };
   });
+
+// toggles <Sidebar />
+export const toggleSidebar = (isOpen, setIsOpen) => {
+  setIsOpen(!isOpen);
+};

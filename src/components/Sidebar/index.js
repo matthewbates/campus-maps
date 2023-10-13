@@ -3,12 +3,20 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { SidebarContainer } from "./SidebarElements";
 
 import { SidebarItems } from "../SidebarItem";
+import { SettingsInputComponent } from "@mui/icons-material";
 
-export const Sidebar = ({ isOpen, toggleSidebar, location }) => {
+export const Sidebar = ({
+  isOpen,
+  setIsOpen,
+  toggleSidebar,
+  name,
+  img,
+  address,
+}) => {
   return (
     <SidebarContainer $isOpen={isOpen}>
       <ArrowBackIcon
-        onClick={toggleSidebar}
+        onClick={() => setIsOpen(false)}
         sx={{
           fontSize: "2em",
           padding: "0.5em",
@@ -16,7 +24,7 @@ export const Sidebar = ({ isOpen, toggleSidebar, location }) => {
           color: "#ffffff",
         }}
       />
-      <SidebarItems location={location} />
+      {<SidebarItems name={name} img={img} address={address} />}
     </SidebarContainer>
   );
 };

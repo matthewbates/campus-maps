@@ -9,26 +9,28 @@ import { Sidebar } from "./components/Sidebar";
 
 function App() {
   const [displayMarkers, setDisplayMarkers] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDisplay = () => {
     setDisplayMarkers(!displayMarkers);
   };
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="App">
-      <Dropdown />
+      <Dropdown
+        displayMarkers={displayMarkers}
+        setDisplayMarkers={setDisplayMarkers}
+        selectedLocation={selectedLocation}
+        setSelectedLocation={setSelectedLocation}
+      />
       <Toggle displayMarkers={displayMarkers} toggleDisplay={toggleDisplay} />
       <Map
         displayMarkers={displayMarkers}
-        toggleSidebar={toggleSidebar}
-        isOpen={isOpen}
+        selectedLocation={selectedLocation}
+        setSelectedLocation={setSelectedLocation}
       />
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }

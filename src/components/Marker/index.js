@@ -1,35 +1,34 @@
-import { useState } from "react";
-
 import { MarkerF } from "@react-google-maps/api";
 
 import { Sidebar } from "../Sidebar";
 
-import { locations } from "../../utils/buildings";
+import { locations } from "../../utils/locations";
+import { toggleSidebar } from "../../utils/helpers";
 
-export const Marker = ({ toggleSidebar, isOpen }) => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
-
-  const toggleSelected = (id) => {
-    setSelectedLocation(id);
-    toggleSidebar();
-  };
-
+export const Marker = ({
+  isOpen,
+  setIsOpen,
+  selectedLocation,
+  setSelectedLocation,
+}) => {
   return (
     <>
-      {locations.map(({ id, name, category, address, coordinates }) => (
+      {locations.map(({ id, name, img, address, coordinates }) => (
         <MarkerF
           onClick={() => {
-            toggleSelected(id);
-            console.log(name);
+            toggleSidebar(isOpen, setIsOpen);
+            setSelectedLocation(id);
           }}
           key={id}
           position={{ lat: coordinates.lat, lng: coordinates.lng }}
         >
-          {isOpen && selectedLocation === id && (
+          {selectedLocation === id && (
             <Sidebar
-              location={locations.find(
-                (location) => location.id === selectedLocation
-              )}
+              name={name}
+              img={img}
+              address={address}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
             />
           )}
         </MarkerF>

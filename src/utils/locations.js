@@ -1,3 +1,53 @@
+import AMMI_HYDE_BUILDING from "../assets/ammi_hyde_building.jpeg";
+import ANDERSON_ACADEMIC_COMMONS from "../assets/anderson_academic_commons.jpeg";
+import BEN_CHERRINGTON_HALL from "../assets/ben_cherrington_hall.jpeg";
+import BOETTCHER_CENTER from "../assets/boettcher_center.jpeg";
+import BUCHTEL_TOWER from "../assets/buchtel_tower.jpeg";
+import BURWELL_CENTER from "../assets/burwell_center.jpeg";
+import CABLE_CENTER from "../assets/cable_center.jpeg";
+import CAMPUS_SAFETY from "../assets/campus_safety.jpeg";
+import CENTENNIAL_HALLS from "../assets/centennial_halls.jpeg";
+import CENTENNIAL_TOWERS from "../assets/centennial_towers.png";
+import CHAMBERLIN_OBSERVATORY from "../assets/chamberlin_observatory.jpeg";
+import CHAMBERS_CENTER from "../assets/chambers_center.jpeg";
+import CLARENCE_KNUDSON_HALL from "../assets/clarence_knudson_hall.jpeg";
+import COMMUNITY_COMMONS from "../assets/community_commons.jpeg";
+import CRAIG_HALL from "../assets/craig_hall.jpeg";
+import DANIELS_COLLEGE from "../assets/daniels_college.jpeg";
+import DIAMOND_FAMILY_RESIDENTIAL from "../assets/diamond_family_residential.jpeg";
+import DRISCOLL_CENTER from "../assets/driscoll_center.jpeg";
+import ENGLISH_LANGUAGE_CENTER from "../assets/english_language_center.jpeg";
+import EVANS_MEMORIAL_CHAPEL from "../assets/evans_memorial_chapel.jpeg";
+import FACILITIES_SERVICE_CENTER from "../assets/facilities_service_center.jpeg";
+import FISHER_LEARNING_CENTER from "../assets/fisher_learning_center.jpeg";
+import FRONTIER_HALL from "../assets/frontier_hall.jpeg";
+import FW_OLIN_HALL from "../assets/fw_olin_hall.jpeg";
+import INFORMATION_TECHNOLOGY from "../assets/information_technology.jpeg";
+import INTL_HOUSE from "../assets/intl_house.jpeg";
+import JOHNSON_MCFARLANE_HALL from "../assets/johnson_mcfarlane_hall.jpeg";
+import JOY_BURNS_CENTER from "../assets/joy_burns_center.jpeg";
+import KATHERINE_RUFFATTO_HALL from "../assets/katherine_ruffatto_hall.jpeg";
+import MARGERY_REED_HALL from "../assets/margery_reed_hall.jpeg";
+import MARY_REED_BUILDING from "../assets/mary_reed_building.jpeg";
+import MASS_COMM_BUILDING from "../assets/mass_comm_building.jpeg";
+import METALLURGY_LAB from "../assets/metallurgy_lab.jpeg";
+import MULTI_CULTURAL_CENTER from "../assets/multi_cultural_center.jpeg";
+import NAGEL_ART_STUDIOS from "../assets/nagel_art_studios.jpeg";
+import NAGEL_HALL from "../assets/nagel_hall.jpeg";
+import NELSON_HALL from "../assets/nelson_hall.jpeg";
+import NEWMAN_PERFORMING_ARTS_CENTER from "../assets/newman_performing_arts_center.jpeg";
+import PHYSICS_HOUSE from "../assets/physics_house.jpeg";
+import RICKS_CENTER from "../assets/ricks_center.jpeg";
+import RITCHIE_CENTER from "../assets/ritchie_center.jpeg";
+import SEELEY_MUDD_BUILDING from "../assets/seeley_mudd_building.jpeg";
+import SHWAYDER_ART_BUILDING from "../assets/shwayder_art_building.jpeg";
+import SIE_CENTER from "../assets/sie_center.jpeg";
+import STURM_COLLEGE_OF_LAW from "../assets/sturm_college_of_law.jpeg";
+import STURM_HALL from "../assets/sturm_hall.jpeg";
+import UNIVERSITY_HALL from "../assets/university_hall.jpeg";
+import UNIVERSITY_OFFICE_ANNEX from "../assets/university_office_annex.jpeg";
+import WESLEY_HALL from "../assets/wesley_hall.jpeg";
+
 export const locations = [
   {
     id: 1,
@@ -20,13 +70,13 @@ export const locations = [
     address: "2190 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676907, lng: -104.964951 },
   },
-  {
-    id: 4,
-    name: "Aspen Hall (ASP)",
-    category: "administrative",
-    address: "Aspen Hall, Denver, CO 80210",
-    coordinates: { lat: 39.67609, lng: -104.963203 },
-  },
+  // {
+  //   id: 4,
+  //   name: "Aspen Hall (ASP)",
+  //   category: "administrative",
+  //   address: "Aspen Hall, Denver, CO 80210",
+  //   coordinates: { lat: 39.67609, lng: -104.963203 },
+  // },
   {
     id: 5,
     name: "Boettcher Center Auditorium (BAUD)",
@@ -34,13 +84,13 @@ export const locations = [
     address: "Boettcher West, Denver, CO 80210",
     coordinates: { lat: 39.67407, lng: -104.962825 },
   },
-  {
-    id: 6,
-    name: "Boettcher Center West (BW)",
-    category: "administrative",
-    address: "2050 E Iliff Ave, Denver, CO 80210",
-    coordinates: { lat: 39.674313, lng: -104.963013 },
-  },
+  // {
+  //   id: 6,
+  //   name: "Boettcher Center West (BW)",
+  //   category: "administrative",
+  //   address: "2050 E Iliff Ave, Denver, CO 80210",
+  //   coordinates: { lat: 39.674313, lng: -104.963013 },
+  // },
   {
     id: 7,
     name: "Ben M. Cherrington Hall (BMC)",
@@ -183,7 +233,7 @@ export const locations = [
   },
   {
     id: 27,
-    name: "Frank H. Ricketson Law Building (LAW)",
+    name: "Sturm College of Law (LAW)",
     category: "administrative",
     address: "2255 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.679352, lng: -104.961266 },
@@ -265,13 +315,13 @@ export const locations = [
     address: "2200 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.67284, lng: -104.961494 },
   },
-  {
-    id: 39,
-    name: "Physics Building (PHYS)",
-    category: "administrative",
-    address: "2112 E Wesley Ave, Denver, CO 80210",
-    coordinates: { lat: 39.672878, lng: -104.962631 },
-  },
+  // {
+  //   id: 39,
+  //   name: "Physics Building (PHYS)",
+  //   category: "administrative",
+  //   address: "2112 E Wesley Ave, Denver, CO 80210",
+  //   coordinates: { lat: 39.672878, lng: -104.962631 },
+  // },
   {
     id: 40,
     name: "Ricks Center for Gifted Children (RICKS)",
@@ -366,6 +416,7 @@ export const locations = [
   {
     id: 53,
     name: "Daniel L. Ritchie Center",
+    img: RITCHIE_CENTER,
     category: "athletics",
     address: "2240 Buchtel Blvd S, Denver, CO 80210",
     coordinates: { lat: 39.682053, lng: -104.962036 },

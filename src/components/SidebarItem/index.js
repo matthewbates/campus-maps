@@ -1,12 +1,19 @@
-import React from "react";
+import {
+  SidebarItemContainer,
+  SidebarWrapper,
+  SidebarItemImg,
+  SidebarItemTitle,
+  SidebarItemAddress,
+} from "./SidebarItemElements";
 
-export const SidebarItems = ({ location }) => {
+export const SidebarItems = ({ name, img, address }) => {
   return (
-    <div
-      style={{ display: "flex", justifyContent: "center", color: "#ffffff" }}
-    >
-      <img />
-      <p></p>
-    </div>
+    <SidebarItemContainer>
+      <SidebarWrapper>
+        <SidebarItemImg src={img} />
+        <SidebarItemTitle>{name}</SidebarItemTitle>
+        <SidebarItemAddress>{address}</SidebarItemAddress>
+      </SidebarWrapper>
+    </SidebarItemContainer>
   );
 };
