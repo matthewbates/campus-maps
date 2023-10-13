@@ -70,13 +70,6 @@ export const locations = [
     address: "2190 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676907, lng: -104.964951 },
   },
-  // {
-  //   id: 4,
-  //   name: "Aspen Hall (ASP)",
-  //   category: "administrative",
-  //   address: "Aspen Hall, Denver, CO 80210",
-  //   coordinates: { lat: 39.67609, lng: -104.963203 },
-  // },
   {
     id: 5,
     name: "Boettcher Center Auditorium (BAUD)",
@@ -84,13 +77,6 @@ export const locations = [
     address: "Boettcher West, Denver, CO 80210",
     coordinates: { lat: 39.67407, lng: -104.962825 },
   },
-  // {
-  //   id: 6,
-  //   name: "Boettcher Center West (BW)",
-  //   category: "administrative",
-  //   address: "2050 E Iliff Ave, Denver, CO 80210",
-  //   coordinates: { lat: 39.674313, lng: -104.963013 },
-  // },
   {
     id: 7,
     name: "Ben M. Cherrington Hall (BMC)",
