@@ -5,9 +5,11 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Marker } from "../Marker";
 
 import { containerStyle } from "../../utils/constants";
+import { locations } from "../../utils/locations";
 
 export const Map = ({
-  displayMarkers,
+  displayMarker,
+  displayAllMarkers,
   selectedLocation,
   setSelectedLocation,
 }) => {
@@ -18,7 +20,11 @@ export const Map = ({
     id: "google-maps-script",
     googleMapsApiKey: "AIzaSyB480SbxWwFx84obwsruZkCeLBIgJOcEVY",
   });
-  const center = { lat: 39.677982, lng: -104.961877 };
+
+  // const center = { lat: 39.677982, lng: -104.961877 };
+  const center = displayMarker
+    ? { lat: displayMarker.coordinates.lat, lng: displayMarker.coordinates.lng }
+    : { lat: 39.677982, lng: -104.961877 };
 
   const onLoad = useCallback((map) => {
     setMap(map);
@@ -27,6 +33,10 @@ export const Map = ({
   const onUnmount = useCallback(() => {
     setMap(null);
   });
+
+  const filteredLocations = displayAllMarkers
+    ? locations
+    : locations.filter((location) => location.id === selectedLocation);
 
   return isLoaded ? (
     <div style={{ display: "flex" }}>
@@ -37,14 +47,15 @@ export const Map = ({
         onUnmount={onUnmount}
         zoom={16}
       >
-        {displayMarkers && (
-          <Marker
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            selectedLocation={selectedLocation}
-            setSelectedLocation={setSelectedLocation}
-          />
-        )}
+        <Marker
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          locations={filteredLocations}
+          displayMarker={displayMarker}
+          displayAllMarkers={displayAllMarkers}
+          selectedLocation={selectedLocation}
+          setSelectedLocation={setSelectedLocation}
+        />
       </GoogleMap>
     </div>
   ) : (

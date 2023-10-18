@@ -5,33 +5,41 @@ import { useState } from "react";
 import { Dropdown } from "./components/Dropdown";
 import { Map } from "./components/Map";
 import { Toggle } from "./components/Toggle";
-import { Sidebar } from "./components/Sidebar";
-import { Marker } from "./components/Marker";
+import { locations } from "./utils/locations";
 
-function App() {
-  const [displayMarkers, setDisplayMarkers] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState("");
+const App = () => {
+  const [displayMarker, setDisplayMarker] = useState(false);
+  const [displayAllMarkers, setDisplayAllMarkers] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState(null);
 
   const toggleDisplay = () => {
-    setDisplayMarkers(!displayMarkers);
+    setDisplayAllMarkers(!displayAllMarkers);
+  };
+
+  const handleMarkerSelection = (id) => {
+    const selectedMarker = locations.find((location) => location.id === id);
+    setDisplayMarker(selectedMarker);
   };
 
   return (
     <div className="App">
       <Dropdown
-        displayMarkers={displayMarkers}
-        setDisplayMarkers={setDisplayMarkers}
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
+        handleMarkerSelection={handleMarkerSelection}
       />
-      <Toggle displayMarkers={displayMarkers} toggleDisplay={toggleDisplay} />
+      <Toggle
+        displayAllMarkers={displayAllMarkers}
+        toggleDisplay={toggleDisplay}
+      />
       <Map
-        displayMarkers={displayMarkers}
+        displayMarker={displayMarker}
+        displayAllMarkers={displayAllMarkers}
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
       />
     </div>
   );
-}
+};
 
 export default App;

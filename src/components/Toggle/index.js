@@ -4,12 +4,12 @@ import { FormControlLabel, Switch } from "@mui/material";
 
 import { ToggleContainer } from "./ToggleElements";
 
-export const Toggle = ({ displayMarkers, toggleDisplay }) => {
+export const Toggle = ({ displayAllMarkers, toggleDisplay }) => {
   return (
     <ToggleContainer>
       <FormControlLabel
         control={<Switch onChange={toggleDisplay} />}
-        label={displayMarkers === true ? "Hide buildings" : "Show buildings"}
+        label={displayAllMarkers === true ? "Hide buildings" : "Show buildings"}
       ></FormControlLabel>
     </ToggleContainer>
   );
