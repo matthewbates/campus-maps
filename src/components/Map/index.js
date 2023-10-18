@@ -9,6 +9,7 @@ import { locations } from "../../utils/locations";
 
 export const Map = ({
   displayMarker,
+  setDisplayMarker,
   displayAllMarkers,
   selectedLocation,
   setSelectedLocation,
@@ -53,6 +54,7 @@ export const Map = ({
           locations={filteredLocations}
           displayMarker={displayMarker}
           displayAllMarkers={displayAllMarkers}
+          setDisplayMarker={setDisplayMarker}
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
         />

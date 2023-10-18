@@ -10,10 +10,11 @@ import { locations } from "./utils/locations";
 const App = () => {
   const [displayMarker, setDisplayMarker] = useState(false);
   const [displayAllMarkers, setDisplayAllMarkers] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState(false);
 
   const toggleDisplay = () => {
     setDisplayAllMarkers(!displayAllMarkers);
+    setSelectedLocation(false);
   };
 
   const handleMarkerSelection = (id) => {
@@ -34,6 +35,7 @@ const App = () => {
       />
       <Map
         displayMarker={displayMarker}
+        setDisplayMarker={setDisplayMarker}
         displayAllMarkers={displayAllMarkers}
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
