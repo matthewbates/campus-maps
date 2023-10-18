@@ -7,6 +7,7 @@ export const SidebarContainer = styled.div`
   top: 0;
   height: 100vh;
   width: 100%;
+  border: 2px solid white;
 
   @media screen and (min-width: 768px) {
     width: 40%;

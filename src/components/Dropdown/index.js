@@ -14,8 +14,12 @@ export const Dropdown = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleChange = () => {
-    console.log(selectedLocation);
+  const handleChange = (selectedLocation) => {
+    locations.filter((location) => {
+      if (location.name === selectedLocation.label) {
+        console.log(selectedLocation);
+      }
+    });
   };
 
   return (

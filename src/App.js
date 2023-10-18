@@ -6,11 +6,11 @@ import { Dropdown } from "./components/Dropdown";
 import { Map } from "./components/Map";
 import { Toggle } from "./components/Toggle";
 import { Sidebar } from "./components/Sidebar";
+import { Marker } from "./components/Marker";
 
 function App() {
   const [displayMarkers, setDisplayMarkers] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDisplay = () => {
     setDisplayMarkers(!displayMarkers);
@@ -30,7 +30,6 @@ function App() {
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
       />
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }
