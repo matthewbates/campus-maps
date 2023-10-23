@@ -11,7 +11,6 @@ export const SidebarItems = ({ name, img, address }) => {
     <SidebarItemContainer>
       <SidebarWrapper>
         <SidebarItemImg src={img} />
-        <SidebarItemTitle>{name}</SidebarItemTitle>
         <SidebarItemAddress>{address}</SidebarItemAddress>
       </SidebarWrapper>
     </SidebarItemContainer>

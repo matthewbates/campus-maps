@@ -30,6 +30,7 @@ const App = () => {
         handleMarkerSelection={handleMarkerSelection}
       />
       <Toggle
+        displayMarker={displayMarker}
         displayAllMarkers={displayAllMarkers}
         toggleDisplay={toggleDisplay}
       />

@@ -12,14 +12,17 @@ export const SidebarWrapper = styled.div`
   align-items: center;
   text-align: center;
   gap: 1em;
+  padding: 1em;
 `;
 
 export const SidebarItemImg = styled.img`
-  display: flex;
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 300px;
 
   @media screen and (min-width: 768px) {
-    /* width: 80%; */
+    max-width: 100%;
   }
 `;
 

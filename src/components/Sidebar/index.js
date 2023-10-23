@@ -1,23 +1,17 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import { SidebarContainer } from "./SidebarElements";
+import {
+  SidebarContainer,
+  SidebarWrapper,
+  SidebarTitle,
+} from "./SidebarElements";
 
 import { SidebarItems } from "../SidebarItem";
 
-export const Sidebar = ({
-  isOpen,
-  setIsOpen,
-  name,
-  img,
-  address,
-  displayMarker,
-  id,
-  selectedLocation,
-}) => {
-  console.log(displayMarker, selectedLocation);
+export const Sidebar = ({ isOpen, setIsOpen, name, img, address }) => {
   return (
-    <>
-      <SidebarContainer $isOpen={isOpen}>
+    <SidebarContainer $isOpen={isOpen}>
+      <SidebarWrapper>
         <ArrowBackIcon
           onClick={() => setIsOpen(false)}
           sx={{
@@ -27,8 +21,9 @@ export const Sidebar = ({
             color: "#ffffff",
           }}
         />
-        {<SidebarItems name={name} img={img} address={address} />}
-      </SidebarContainer>
-    </>
+        <SidebarTitle>{name}</SidebarTitle>
+      </SidebarWrapper>
+      {<SidebarItems name={name} img={img} address={address} />}
+    </SidebarContainer>
   );
 };

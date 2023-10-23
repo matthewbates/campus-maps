@@ -49,12 +49,11 @@ export const Map = ({
         zoom={16}
       >
         <Marker
+          map={map}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           locations={filteredLocations}
           displayMarker={displayMarker}
-          displayAllMarkers={displayAllMarkers}
-          setDisplayMarker={setDisplayMarker}
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
         />
