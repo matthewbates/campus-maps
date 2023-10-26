@@ -8,6 +8,7 @@ export const SidebarContainer = styled.div`
   top: 0;
   height: 100vh;
   width: 100%;
+  font-family: "Roboto";
 
   @media screen and (min-width: 768px) {
     width: 40%;

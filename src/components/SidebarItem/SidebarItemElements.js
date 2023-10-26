@@ -4,6 +4,7 @@ export const SidebarItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-family: "Roboto";
 `;
 
 export const SidebarWrapper = styled.div`

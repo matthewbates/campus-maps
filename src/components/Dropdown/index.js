@@ -23,7 +23,22 @@ export const Dropdown = ({ handleMarkerSelection }) => {
           ...baseStyles,
           width: "100%",
           height: "4em",
-          cursor: "pointer",
+        }),
+        option: (baseStyles) => ({
+          ...baseStyles,
+          fontFamily: "Roboto",
+        }),
+        placeholder: (baseStyles) => ({
+          ...baseStyles,
+          fontFamily: "Roboto",
+        }),
+        singleValue: (baseStyles) => ({
+          ...baseStyles,
+          fontFamily: "Arial",
+        }),
+        input: (baseStyles) => ({
+          ...baseStyles,
+          fontFamily: "Roboto",
         }),
       }}
     />

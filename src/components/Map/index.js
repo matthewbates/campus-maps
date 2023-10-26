@@ -4,7 +4,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 import { Marker } from "../Marker";
 
-import { containerStyle } from "../../utils/constants";
+import { containerStyle, mapOptions } from "../../utils/constants";
 import { locations } from "../../utils/locations";
 
 export const Map = ({
@@ -42,6 +42,7 @@ export const Map = ({
   return isLoaded ? (
     <div style={{ display: "flex" }}>
       <GoogleMap
+        options={mapOptions}
         mapContainerStyle={containerStyle}
         center={center}
         onLoad={onLoad}

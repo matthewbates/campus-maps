@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-import { MarkerF, InfoWindowF } from "@react-google-maps/api";
+import { MarkerF } from "@react-google-maps/api";
 
 import { Sidebar } from "../Sidebar";
 
@@ -15,23 +13,10 @@ export const Marker = ({
   selectedLocation,
   setSelectedLocation,
 }) => {
-  const [showInfoWindow, setShowInfoWindow] = useState(false);
-
-  const handleMouseOver = () => {
-    setShowInfoWindow(true);
-    console.log("Mouse is hovering over the marker");
-  };
-
-  const handleMouseLeave = () => {
-    setShowInfoWindow(false);
-    console.log("Mouse is leaving the marker");
-  };
-
   return (
     <>
       {locations.map(({ id, name, img, address, coordinates }) => (
         <MarkerF
-          onMouseOver={handleMouseOver}
           onClick={() => {
             toggleSidebar(isOpen, setIsOpen);
             setIsOpen(!isOpen);
@@ -49,7 +34,8 @@ export const Marker = ({
           }
         >
           {(displayMarker && displayMarker.id === id) ||
-          (selectedLocation === id && !displayMarker) ? (
+          // (selectedLocation === id && displayMarker) ? (
+          selectedLocation === id ? (
             <Sidebar
               name={name}
               img={img}

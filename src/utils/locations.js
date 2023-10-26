@@ -1,57 +1,7 @@
-import AMMI_HYDE_BUILDING from "../assets/ammi_hyde_building.jpeg";
-import ANDERSON_ACADEMIC_COMMONS from "../assets/anderson_academic_commons.jpeg";
-import BEN_CHERRINGTON_HALL from "../assets/ben_cherrington_hall.jpeg";
-import BOETTCHER_CENTER from "../assets/boettcher_center.jpeg";
-import BUCHTEL_TOWER from "../assets/buchtel_tower.jpeg";
-import BURWELL_CENTER from "../assets/burwell_center.jpeg";
-import CABLE_CENTER from "../assets/cable_center.jpeg";
-import CAMPUS_SAFETY from "../assets/campus_safety.jpeg";
-import CENTENNIAL_HALLS from "../assets/centennial_halls.jpeg";
-import CENTENNIAL_TOWERS from "../assets/centennial_towers.png";
-import CHAMBERLIN_OBSERVATORY from "../assets/chamberlin_observatory.jpeg";
-import CHAMBERS_CENTER from "../assets/chambers_center.jpeg";
-import CLARENCE_KNUDSON_HALL from "../assets/clarence_knudson_hall.jpeg";
-import COMMUNITY_COMMONS from "../assets/community_commons.jpeg";
-import CRAIG_HALL from "../assets/craig_hall.jpeg";
-import DANIELS_COLLEGE from "../assets/daniels_college.jpeg";
-import DIAMOND_FAMILY_RESIDENTIAL from "../assets/diamond_family_residential.jpeg";
-import DRISCOLL_CENTER from "../assets/driscoll_center.jpeg";
-import ENGLISH_LANGUAGE_CENTER from "../assets/english_language_center.jpeg";
-import EVANS_MEMORIAL_CHAPEL from "../assets/evans_memorial_chapel.jpeg";
-import FACILITIES_SERVICE_CENTER from "../assets/facilities_service_center.jpeg";
-import FISHER_LEARNING_CENTER from "../assets/fisher_learning_center.jpeg";
-import FRONTIER_HALL from "../assets/frontier_hall.jpeg";
-import FW_OLIN_HALL from "../assets/fw_olin_hall.jpeg";
-import INFORMATION_TECHNOLOGY from "../assets/information_technology.jpeg";
-import INTL_HOUSE from "../assets/intl_house.jpeg";
-import JOHNSON_MCFARLANE_HALL from "../assets/johnson_mcfarlane_hall.jpeg";
-import JOY_BURNS_CENTER from "../assets/joy_burns_center.jpeg";
-import KATHERINE_RUFFATTO_HALL from "../assets/katherine_ruffatto_hall.jpeg";
-import MARGERY_REED_HALL from "../assets/margery_reed_hall.jpeg";
-import MARY_REED_BUILDING from "../assets/mary_reed_building.jpeg";
-import MASS_COMM_BUILDING from "../assets/mass_comm_building.jpeg";
-import METALLURGY_LAB from "../assets/metallurgy_lab.jpeg";
-import MULTI_CULTURAL_CENTER from "../assets/multi_cultural_center.jpeg";
-import NAGEL_ART_STUDIOS from "../assets/nagel_art_studios.jpeg";
-import NAGEL_HALL from "../assets/nagel_hall.jpeg";
-import NELSON_HALL from "../assets/nelson_hall.jpeg";
-import NEWMAN_PERFORMING_ARTS_CENTER from "../assets/newman_performing_arts_center.jpeg";
-import PHYSICS_HOUSE from "../assets/physics_house.jpeg";
-import RICKS_CENTER from "../assets/ricks_center.jpeg";
-import RITCHIE_CENTER from "../assets/ritchie_center.jpeg";
-import SEELEY_MUDD_BUILDING from "../assets/seeley_mudd_building.jpeg";
-import SHWAYDER_ART_BUILDING from "../assets/shwayder_art_building.jpeg";
-import SIE_CENTER from "../assets/sie_center.jpeg";
-import STURM_COLLEGE_OF_LAW from "../assets/sturm_college_of_law.jpeg";
-import STURM_HALL from "../assets/sturm_hall.jpeg";
-import UNIVERSITY_HALL from "../assets/university_hall.jpeg";
-import UNIVERSITY_OFFICE_ANNEX from "../assets/university_office_annex.jpeg";
-import WESLEY_HALL from "../assets/wesley_hall.jpeg";
-
 export const locations = [
   {
     id: 1,
-    img: ANDERSON_ACADEMIC_COMMONS,
+    img: require("../assets/anderson_academic_commons.jpeg"),
     name: "Anderson Academic Commons (AAC)",
     category: "administrative",
     address: "2150 E Evans Ave, Denver, CO 80210",
@@ -59,7 +9,7 @@ export const locations = [
   },
   {
     id: 2,
-    img: AMMI_HYDE_BUILDING,
+    img: require("../assets/ammi_hyde_building.jpeg"),
     name: "Ammi Hyde Building (AHB)",
     category: "administrative",
     address: " 2450 S Vine St, Denver, CO 80210",
@@ -67,7 +17,7 @@ export const locations = [
   },
   {
     id: 3,
-    img: UNIVERSITY_OFFICE_ANNEX,
+    img: require("../assets/university_office_annex.jpeg"),
     name: "University Office Annex (ANNEX)",
     category: "administrative",
     address: "2190 S High St, Denver, CO 80210",
@@ -75,7 +25,7 @@ export const locations = [
   },
   {
     id: 5,
-    img: BOETTCHER_CENTER,
+    img: require("../assets/boettcher_center.jpeg"),
     name: "Boettcher Center Auditorium (BAUD)",
     category: "administrative",
     address: "Boettcher West, Denver, CO 80210",
@@ -83,7 +33,7 @@ export const locations = [
   },
   {
     id: 7,
-    img: BEN_CHERRINGTON_HALL,
+    img: require("../assets/ben_cherrington_hall.jpeg"),
     name: "Ben M. Cherrington Hall (BMC)",
     category: "administrative",
     address: "2210 S Gaylord St, Denver, CO 80210",
@@ -91,7 +41,7 @@ export const locations = [
   },
   {
     id: 8,
-    img: BUCHTEL_TOWER,
+    img: require("../assets/buchtel_tower.jpeg"),
     name: "Buchtel Tower (BUCHTEL)",
     category: "administrative",
     address: "Buchtel Memorial Tower, Denver, CO 80210",
@@ -99,7 +49,7 @@ export const locations = [
   },
   {
     id: 9,
-    img: CABLE_CENTER,
+    img: require("../assets/cable_center.jpeg"),
     name: "Cable Center (CABLE)",
     category: "administrative",
     address: "1984 Buchtel Blvd S, Denver, CO 80210, USA",
@@ -107,7 +57,7 @@ export const locations = [
   },
   {
     id: 10,
-    img: CHAMBERS_CENTER,
+    img: require("../assets/chambers_center.jpeg"),
     name: "Chambers Center (CC)",
     category: "administrative",
     address: "1901 E Asbury Ave, Denver, CO 80210",
@@ -115,7 +65,7 @@ export const locations = [
   },
   {
     id: 11,
-    img: CLARENCE_KNUDSON_HALL,
+    img: require("../assets/clarence_knudson_hall.jpeg"),
     name: "Clarence M. Knudson Hall (CMK)",
     category: "administrative",
     address: "2390 S York St, Denver, CO 80210",
@@ -123,7 +73,7 @@ export const locations = [
   },
   {
     id: 12,
-    img: CHAMBERLIN_OBSERVATORY,
+    img: require("../assets/chamberlin_observatory.jpeg"),
     name: "Chamberlin Observatory (COBS)",
     category: "administrative",
     address: "2930 E Warren Ave, Denver, CO 8021",
@@ -131,7 +81,7 @@ export const locations = [
   },
   {
     id: 13,
-    img: CRAIG_HALL,
+    img: require("../assets/craig_hall.jpeg"),
     name: "Craig Hall (CRAIG)",
     category: "administrative",
     address: "2120 S High St, Denver, CO 80210",
@@ -139,7 +89,7 @@ export const locations = [
   },
   {
     id: 14,
-    img: CAMPUS_SAFETY,
+    img: require("../assets/campus_safety.jpeg"),
     name: "Campus Safety & Parking Services (SAFE)",
     category: "administrative",
     address: "2130 S High St, Denver, CO 80210",
@@ -147,7 +97,7 @@ export const locations = [
   },
   {
     id: 15,
-    img: DANIELS_COLLEGE,
+    img: require("../assets/daniels_college.jpeg"),
     name: "Daniels College of Business (DCB)",
     category: "administrative",
     address: "2101 S University Blvd, Denver, CO 80210",
@@ -155,7 +105,7 @@ export const locations = [
   },
   {
     id: 16,
-    img: DRISCOLL_CENTER,
+    img: require("../assets/driscoll_center.jpeg"),
     name: "Driscoll Center South (DS)",
     category: "administrative",
     address: "2050 E Evans Ave, Denver, CO 80210",
@@ -163,7 +113,7 @@ export const locations = [
   },
   {
     id: 17,
-    img: ENGLISH_LANGUAGE_CENTER,
+    img: require("../assets/english_language_center.jpeg"),
     name: "English Language Center (ELC)",
     category: "administrative",
     address: "1958 S Josephine St, Denver, CO 80210",
@@ -171,7 +121,7 @@ export const locations = [
   },
   {
     id: 18,
-    img: EVANS_MEMORIAL_CHAPEL,
+    img: require("../assets/evans_memorial_chapel.jpeg"),
     name: "Evans Memorial Chapel (EMC)",
     category: "administrative",
     address: "2199 S Race St, Denver, CO 80210",
@@ -179,7 +129,7 @@ export const locations = [
   },
   {
     id: 19,
-    img: FRONTIER_HALL,
+    img: require("../assets/frontier_hall.jpeg"),
     name: "Frontier Hall (FH)",
     category: "administrative",
     address: "2155 S Race St, Denver, CO 80210",
@@ -187,7 +137,7 @@ export const locations = [
   },
   {
     id: 20,
-    img: FISHER_LEARNING_CENTER,
+    img: require("../assets/fisher_learning_center.jpeg"),
     name: "Fisher Early Learning Center (FISH)",
     category: "administrative",
     address: "1899 E Evans Ave, Denver, CO 80210",
@@ -195,7 +145,7 @@ export const locations = [
   },
   {
     id: 21,
-    img: FACILITIES_SERVICE_CENTER,
+    img: require("../assets/facilities_service_center.jpeg"),
     name: "Facilities Service Center (FAC)",
     category: "administrative",
     address: "2430 S Race St, Denver, CO 80210",
@@ -203,7 +153,7 @@ export const locations = [
   },
   {
     id: 22,
-    img: CENTENNIAL_HALLS,
+    img: require("../assets/centennial_halls.jpeg"),
     name: "Centennial Halls (HALLS)",
     category: "administrative",
     address: "Centennial Halls, Denver, CO 80210",
@@ -211,7 +161,7 @@ export const locations = [
   },
   {
     id: 23,
-    img: JOY_BURNS_CENTER,
+    img: require("../assets/joy_burns_center.jpeg"),
     name: "Joy Burns Center (HRTM)",
     category: "administrative",
     address: "2044 E Evans Ave, Denver, CO 80210",
@@ -219,7 +169,7 @@ export const locations = [
   },
   {
     id: 24,
-    img: INTL_HOUSE,
+    img: require("../assets/intl_house.jpeg"),
     name: "International House (INTL)",
     category: "administrative",
     address: "2200 S Josephine St, Denver, CO 80210",
@@ -227,7 +177,7 @@ export const locations = [
   },
   {
     id: 25,
-    img: JOHNSON_MCFARLANE_HALL,
+    img: require("../assets/johnson_mcfarlane_hall.jpeg"),
     name: "Johnson-McFarlane Hall (JMAC)",
     category: "administrative",
     address: "1901 E Iliff Ave, Denver, CO 80210",
@@ -235,7 +185,7 @@ export const locations = [
   },
   {
     id: 26,
-    img: KATHERINE_RUFFATTO_HALL,
+    img: require("../assets/katherine_ruffatto_hall.jpeg"),
     name: "Katherine A. Ruffatto Hall (KRH)",
     category: "administrative",
     address: "1999 E Evans Ave, Denver, CO 80210",
@@ -243,7 +193,7 @@ export const locations = [
   },
   {
     id: 27,
-    img: STURM_COLLEGE_OF_LAW,
+    img: require("../assets/sturm_college_of_law.jpeg"),
     name: "Sturm College of Law (LAW)",
     category: "administrative",
     address: "2255 E Evans Ave, Denver, CO 80210",
@@ -251,7 +201,7 @@ export const locations = [
   },
   {
     id: 28,
-    img: MASS_COMM_BUILDING,
+    img: require("../assets/mass_comm_building.jpeg"),
     name: "Mass Communications Building (MC)",
     category: "administrative",
     address: "2490 S Gaylord St, Denver, CO 80210",
@@ -259,7 +209,7 @@ export const locations = [
   },
   {
     id: 29,
-    img: MULTI_CULTURAL_CENTER,
+    img: require("../assets/multi_cultural_center.jpeg"),
     name: "Multi-Cultural Center (MULTI)",
     category: "administrative",
     address: "1981 S University Blvd, Denver, CO 80210",
@@ -267,7 +217,7 @@ export const locations = [
   },
   {
     id: 30,
-    img: METALLURGY_LAB,
+    img: require("../assets/metallurgy_lab.jpeg"),
     name: "Metallurgy Laboratory (MET)",
     category: "administrative",
     address: "2450 S Gaylord St, Denver, CO 80210",
@@ -275,7 +225,7 @@ export const locations = [
   },
   {
     id: 31,
-    img: MARY_REED_BUILDING,
+    img: require("../assets/mary_reed_building.jpeg"),
     name: "Mary Reed Building (MRB)",
     category: "administrative",
     address: "2199 S University Blvd, Denver, CO 80210",
@@ -283,7 +233,7 @@ export const locations = [
   },
   {
     id: 32,
-    img: MARGERY_REED_HALL,
+    img: require("../assets/margery_reed_hall.jpeg"),
     name: "Margery Reed Hall (MRH)",
     category: "administrative",
     address: "Margery Reed Bldg, Denver, CO 80210",
@@ -291,7 +241,7 @@ export const locations = [
   },
   {
     id: 33,
-    img: NAGEL_HALL,
+    img: require("../assets/nagel_hall.jpeg"),
     name: "Nagel Hall (NAGEL)",
     category: "administrative",
     address: "2194 S High St, Denver, CO 80210",
@@ -299,7 +249,7 @@ export const locations = [
   },
   {
     id: 34,
-    img: NAGEL_ART_STUDIOS,
+    img: require("../assets/nagel_art_studios.jpeg"),
     name: "Nagel Art Studios (NAS)",
     category: "administrative",
     address: "2201 E Asbury Ave, Denver, CO 80210",
@@ -307,7 +257,7 @@ export const locations = [
   },
   {
     id: 35,
-    img: NELSON_HALL,
+    img: require("../assets/nelson_hall.jpeg"),
     name: "Nelson Hall (NELSON)",
     category: "administrative",
     address: "2220 S High St, Denver, CO 80210",
@@ -315,7 +265,7 @@ export const locations = [
   },
   {
     id: 36,
-    img: NEWMAN_PERFORMING_ARTS_CENTER,
+    img: require("../assets/newman_performing_arts_center.jpeg"),
     name: "Newman Performing Arts Center (NEWMAN)",
     category: "administrative",
     address: "2344 E Iliff Ave, Denver, CO 80210",
@@ -323,7 +273,7 @@ export const locations = [
   },
   {
     id: 37,
-    img: FW_OLIN_HALL,
+    img: require("../assets/fw_olin_hall.jpeg"),
     name: "F.W. Olin Hall (OLIN)",
     category: "administrative",
     address: "2190 E Iliff Ave, Denver, CO 80210",
@@ -331,7 +281,7 @@ export const locations = [
   },
   {
     id: 38,
-    img: PHYSICS_HOUSE,
+    img: require("../assets/physics_house.jpeg"),
     name: "Physics House",
     category: "administrative",
     address: "2200 E Wesley Ave, Denver, CO 80210",
@@ -346,7 +296,7 @@ export const locations = [
   // },
   {
     id: 40,
-    img: RICKS_CENTER,
+    img: require("../assets/ricks_center.jpeg"),
     name: "Ricks Center for Gifted Children (RICKS)",
     category: "administrative",
     address: "2040 S York St, Denver, CO 80210",
@@ -354,7 +304,7 @@ export const locations = [
   },
   {
     id: 41,
-    img: SHWAYDER_ART_BUILDING,
+    img: require("../assets/shwayder_art_building.jpeg"),
     name: "Shwayder Art Building (SAB)",
     category: "administrative",
     address: "2121 E Asbury Ave, Denver, CO 80210",
@@ -362,7 +312,7 @@ export const locations = [
   },
   {
     id: 42,
-    img: SEELEY_MUDD_BUILDING,
+    img: require("../assets/seeley_mudd_building.jpeg"),
     name: "Seeley G. Mudd Building (SGM)",
     category: "administrative",
     address: "2101 E Wesley Ave, Denver, CO 80210",
@@ -370,7 +320,7 @@ export const locations = [
   },
   {
     id: 43,
-    img: SIE_CENTER,
+    img: require("../assets/sie_center.jpeg"),
     name: "Sie International Relations Complex (SIE)",
     category: "administrative",
     address: "2201 S Gaylord St, Denver, CO 80210",
@@ -378,7 +328,7 @@ export const locations = [
   },
   {
     id: 44,
-    img: STURM_HALL,
+    img: require("../assets/sturm_hall.jpeg"),
     name: "Sturm Hall (STURM)",
     category: "administrative",
     address: "Sturm Hall, Denver, CO 80210",
@@ -386,7 +336,7 @@ export const locations = [
   },
   {
     id: 45,
-    img: CENTENNIAL_TOWERS,
+    img: require("../assets/centennial_towers.png"),
     name: "Centennial Towers (TOWERS)",
     category: "administrative",
     address: "1701 S High St, Denver, CO 80210, USA",
@@ -401,7 +351,7 @@ export const locations = [
   // },
   {
     id: 47,
-    img: UNIVERSITY_HALL,
+    img: require("../assets/university_hall.jpeg"),
     name: "University Hall (UH)",
     category: "administrative",
     address: "2197 S University Blvd, Denver, CO 80210",
@@ -409,7 +359,7 @@ export const locations = [
   },
   {
     id: 48,
-    img: INFORMATION_TECHNOLOGY,
+    img: require("../assets/information_technology.jpeg"),
     name: "Information Technology (IT)",
     category: "administrative",
     address: "2100 S High St, Denver, CO 80210",
@@ -417,7 +367,7 @@ export const locations = [
   },
   {
     id: 49,
-    img: WESLEY_HALL,
+    img: require("../assets/wesley_hall.jpeg"),
     name: "Wesley Hall (WH)",
     category: "administrative",
     address: "2135 E Wesley Ave, Denver, CO 80210",
@@ -425,7 +375,7 @@ export const locations = [
   },
   {
     id: 50,
-    img: COMMUNITY_COMMONS,
+    img: require("../assets/community_commons.jpeg"),
     name: "Community Commons (CCOM)",
     category: "administrative",
     address: "2070 E Evans Ave, Denver, CO 80210",
@@ -433,7 +383,7 @@ export const locations = [
   },
   {
     id: 51,
-    img: DIAMOND_FAMILY_RESIDENTIAL,
+    img: require("../assets/diamond_family_residential.jpeg"),
     name: "Diamond Family Residential Village (DIAMOND)",
     category: "administrative",
     address: "2045 S Race St, Denver, CO 80210",
@@ -441,7 +391,7 @@ export const locations = [
   },
   {
     id: 52,
-    img: BURWELL_CENTER,
+    img: require("../assets/burwell_center.jpeg"),
     name: "Burwell Center for Career Achievement (BCCA)",
     category: "administrative",
     address: "2190 E Asbury Ave, Denver, CO 80210",
@@ -450,7 +400,7 @@ export const locations = [
   {
     id: 53,
     name: "Daniel L. Ritchie Center",
-    img: RITCHIE_CENTER,
+    img: require("../assets/ritchie_center.jpeg"),
     category: "athletics",
     address: "2240 Buchtel Blvd S, Denver, CO 80210",
     coordinates: { lat: 39.682053, lng: -104.962036 },
