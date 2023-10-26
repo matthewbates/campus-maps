@@ -9,7 +9,10 @@ export const SidebarItems = ({ name, img, address }) => {
   return (
     <SidebarItemContainer>
       <SidebarWrapper>
-        <SidebarItemImg src={img} alt={name} />
+        <SidebarItemImg
+          src={require("../../assets/anderson_academic_commons.jpeg")}
+          alt={name}
+        />
         <SidebarItemAddress>{address}</SidebarItemAddress>
       </SidebarWrapper>
     </SidebarItemContainer>
