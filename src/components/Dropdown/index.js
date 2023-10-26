@@ -22,7 +22,7 @@ export const Dropdown = ({ handleMarkerSelection }) => {
         control: (baseStyles) => ({
           ...baseStyles,
           width: "100%",
-          height: "4em",
+          height: "3em",
         }),
         option: (baseStyles) => ({
           ...baseStyles,

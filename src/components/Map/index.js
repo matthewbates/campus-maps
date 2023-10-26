@@ -9,7 +9,6 @@ import { locations } from "../../utils/locations";
 
 export const Map = ({
   displayMarker,
-  setDisplayMarker,
   displayAllMarkers,
   selectedLocation,
   setSelectedLocation,
@@ -40,14 +39,13 @@ export const Map = ({
     : locations.filter((location) => location.id === selectedLocation);
 
   return isLoaded ? (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", zIndex: 1 }}>
       <GoogleMap
         options={mapOptions}
         mapContainerStyle={containerStyle}
         center={center}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        zoom={16}
       >
         <Marker
           map={map}

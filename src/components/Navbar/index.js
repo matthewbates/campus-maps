@@ -1,10 +1,28 @@
-import { Dropdown } from "../Dropdown";
 import { NavbarContainer } from "./NavbarElements";
 
-export const Navbar = () => {
+import { Dropdown } from "../Dropdown";
+import { Toggle } from "../Toggle";
+
+export const Navbar = ({
+  selectedLocation,
+  setSelectedLocation,
+  handleMarkerSelection,
+  displayMarker,
+  displayAllMarkers,
+  toggleDisplay,
+}) => {
   return (
     <NavbarContainer>
-      <Dropdown />
+      <Dropdown
+        selectedLocation={selectedLocation}
+        setSelectedLocation={setSelectedLocation}
+        handleMarkerSelection={handleMarkerSelection}
+      />
+      <Toggle
+        displayMarker={displayMarker}
+        displayAllMarkers={displayAllMarkers}
+        toggleDisplay={toggleDisplay}
+      />
     </NavbarContainer>
   );
 };

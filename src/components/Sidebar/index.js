@@ -1,4 +1,6 @@
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useState } from "react";
+
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
 import {
   SidebarContainer,
@@ -7,18 +9,27 @@ import {
 } from "./SidebarElements";
 
 import { SidebarItems } from "../SidebarItem";
+import { toggleSidebar } from "../../utils/helpers";
 
 export const Sidebar = ({ isOpen, setIsOpen, name, img, address }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const toggleMouse = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
     <SidebarContainer $isOpen={isOpen}>
       <SidebarWrapper>
-        <ArrowBackIcon
-          onClick={() => setIsOpen(false)}
+        <ArrowCircleLeftIcon
+          onMouseOver={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onClick={() => toggleSidebar(isOpen, setIsOpen)}
           sx={{
             fontSize: "2em",
-            padding: "0.5em",
             cursor: "pointer",
-            color: "#ffffff",
+            color: isHovered === true ? "lightgray" : "#ffffff",
+            transition: "0.3s ease;",
           }}
         />
         <SidebarTitle>{name}</SidebarTitle>

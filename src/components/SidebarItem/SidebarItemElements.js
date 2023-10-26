@@ -21,9 +21,11 @@ export const SidebarItemImg = styled.img`
   height: auto;
   object-fit: cover;
   max-height: 300px;
+  border: 2px solid white;
 
   @media screen and (min-width: 768px) {
-    max-width: 100%;
+    /* max-width: 100%; */
+    max-height: 200px;
   }
 `;
 
@@ -35,4 +37,5 @@ export const SidebarItemTitle = styled.div`
 
 export const SidebarItemAddress = styled.div`
   color: #ffffff;
+  font-style: italic;
 `;

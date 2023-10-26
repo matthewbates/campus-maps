@@ -6,6 +6,7 @@ import { Dropdown } from "./components/Dropdown";
 import { Map } from "./components/Map";
 import { Toggle } from "./components/Toggle";
 import { locations } from "./utils/locations";
+import { Navbar } from "./components/Navbar";
 
 const App = () => {
   const [displayMarker, setDisplayMarker] = useState(false);
@@ -24,6 +25,14 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* <Navbar
+        selectedLocation={selectedLocation}
+        setSelectedLocation={setSelectedLocation}
+        handleMarkerSelection={handleMarkerSelection}
+        displayMarker={displayMarker}
+        displayAllMarkers={displayAllMarkers}
+        toggleDisplay={toggleDisplay}
+      /> */}
       <Dropdown
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}

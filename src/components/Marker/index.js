@@ -19,7 +19,6 @@ export const Marker = ({
         <MarkerF
           onClick={() => {
             toggleSidebar(isOpen, setIsOpen);
-            setIsOpen(!isOpen);
             setSelectedLocation(id);
           }}
           key={id}
@@ -34,8 +33,7 @@ export const Marker = ({
           }
         >
           {(displayMarker && displayMarker.id === id) ||
-          // (selectedLocation === id && displayMarker) ? (
-          selectedLocation === id ? (
+          (selectedLocation === id && !displayMarker) ? (
             <Sidebar
               name={name}
               img={img}

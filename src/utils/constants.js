@@ -4,8 +4,7 @@ export const containerStyle = {
 };
 
 export const mapOptions = {
-  // gestureHandling: "greedy",
-  zoom: 18,
+  zoom: 16,
   mapTypeControl: true,
   // mapTypeControlOptions: {
   //   position: window.google.maps.ControlPosition.TOP_CENTER,
@@ -133,7 +132,7 @@ export const mapOptions = {
       featureType: "road.highway",
       stylers: [
         {
-          visibility: "off",
+          visibility: "on",
         },
       ],
     },
