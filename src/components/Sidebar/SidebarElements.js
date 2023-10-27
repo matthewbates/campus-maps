@@ -4,11 +4,10 @@ export const SidebarContainer = styled.div`
   position: fixed;
   left: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
   background: #212121;
-  /* top: 80px; */
   height: 100vh;
   width: 100%;
   font-family: "Roboto";
-  transition: 0.3s linear;
+  transition: 0.3s ease;
 
   @media screen and (min-width: 768px) {
     width: 40%;
@@ -21,8 +20,9 @@ export const SidebarContainer = styled.div`
 
 export const SidebarWrapper = styled.div`
   display: flex;
-  padding: 0.5em;
   align-items: center;
+  margin-top: 1em;
+  margin-left: 1em;
 `;
 
 export const SidebarTitle = styled.div`

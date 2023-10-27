@@ -7,9 +7,8 @@ export const NavbarContainer = styled.div`
   z-index: 2;
   top: 0;
   position: sticky;
-  height: 80px;
 
-  @media screen and (max-width: 490px) {
+  @media screen and (max-width: 600px) {
     flex-direction: column;
   }
 `;

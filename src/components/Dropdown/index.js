@@ -1,9 +1,17 @@
+import { useState, useEffect } from "react";
+
 import Select from "react-select";
+
+import { DropdownContainer } from "./DropdownElements";
 
 import { options } from "../../utils/helpers";
 import { locations } from "../../utils/locations";
 
 export const Dropdown = ({ handleMarkerSelection }) => {
+  const [selectWidth, setSelectWidth] = useState(
+    window.innerWidth < 600 ? "100vw" : "50vw"
+  );
+
   const handleChange = (selectedLocation) => {
     const selected = locations.find(
       (location) => location.name === selectedLocation.value
@@ -13,34 +21,48 @@ export const Dropdown = ({ handleMarkerSelection }) => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setSelectWidth(window.innerWidth < 600 ? "100vw" : "50vw");
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <Select
-      onChange={handleChange}
-      options={options}
-      placeholder="Search..."
-      styles={{
-        control: (baseStyles) => ({
-          ...baseStyles,
-          width: "100%",
-          height: "3em",
-        }),
-        option: (baseStyles) => ({
-          ...baseStyles,
-          fontFamily: "Roboto",
-        }),
-        placeholder: (baseStyles) => ({
-          ...baseStyles,
-          fontFamily: "Roboto",
-        }),
-        singleValue: (baseStyles) => ({
-          ...baseStyles,
-          fontFamily: "Arial",
-        }),
-        input: (baseStyles) => ({
-          ...baseStyles,
-          fontFamily: "Roboto",
-        }),
-      }}
-    />
+    <DropdownContainer>
+      <Select
+        onChange={handleChange}
+        options={options}
+        placeholder="Search..."
+        styles={{
+          control: (baseStyles) => ({
+            ...baseStyles,
+            width: selectWidth,
+            height: "2.5em",
+            justifyContent: "center",
+            alignItems: "center",
+          }),
+          option: (baseStyles) => ({
+            ...baseStyles,
+            fontFamily: "Roboto",
+          }),
+          placeholder: (baseStyles) => ({
+            ...baseStyles,
+            fontFamily: "Roboto",
+          }),
+          singleValue: (baseStyles) => ({
+            ...baseStyles,
+            fontFamily: "Arial",
+          }),
+          input: (baseStyles) => ({
+            ...baseStyles,
+            fontFamily: "Roboto",
+          }),
+        }}
+      />
+    </DropdownContainer>
   );
 };

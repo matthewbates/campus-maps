@@ -9,6 +9,7 @@ export const Navbar = ({
   handleMarkerSelection,
   displayMarker,
   displayAllMarkers,
+  setDisplayAllMarkers,
   toggleDisplay,
 }) => {
   return (
@@ -21,6 +22,7 @@ export const Navbar = ({
       <Toggle
         displayMarker={displayMarker}
         displayAllMarkers={displayAllMarkers}
+        setDisplayAllMarkers={setDisplayAllMarkers}
         toggleDisplay={toggleDisplay}
       />
     </NavbarContainer>

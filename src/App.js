@@ -15,7 +15,7 @@ const App = () => {
 
   const toggleDisplay = () => {
     setDisplayAllMarkers(!displayAllMarkers);
-    setSelectedLocation(false);
+    setSelectedLocation(!selectedLocation);
   };
 
   const handleMarkerSelection = (id) => {
@@ -25,15 +25,16 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Navbar
+      <Navbar
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
         handleMarkerSelection={handleMarkerSelection}
         displayMarker={displayMarker}
         displayAllMarkers={displayAllMarkers}
+        setDisplayAllMarkers={setDisplayAllMarkers}
         toggleDisplay={toggleDisplay}
-      /> */}
-      <Dropdown
+      />
+      {/* <Dropdown
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
         handleMarkerSelection={handleMarkerSelection}
@@ -42,7 +43,7 @@ const App = () => {
         displayMarker={displayMarker}
         displayAllMarkers={displayAllMarkers}
         toggleDisplay={toggleDisplay}
-      />
+      /> */}
       <Map
         displayMarker={displayMarker}
         setDisplayMarker={setDisplayMarker}

@@ -21,3 +21,13 @@ export const options = locations
 export const toggleSidebar = (isOpen, setIsOpen) => {
   setIsOpen(!isOpen);
 };
+
+export const filteredLocations = (
+  displayAllMarkers,
+  locations,
+  selectedLocation
+) => {
+  return displayAllMarkers
+    ? locations
+    : locations.filter((location) => location.id === selectedLocation);
+};
