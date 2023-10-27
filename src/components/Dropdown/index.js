@@ -9,7 +9,7 @@ import { locations } from "../../utils/locations";
 
 export const Dropdown = ({ handleMarkerSelection }) => {
   const [selectWidth, setSelectWidth] = useState(
-    window.innerWidth < 600 ? "100vw" : "50vw"
+    window.innerWidth < 600 ? "90vw" : "50vw"
   );
 
   const handleChange = (selectedLocation) => {
@@ -23,7 +23,7 @@ export const Dropdown = ({ handleMarkerSelection }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setSelectWidth(window.innerWidth < 600 ? "100vw" : "50vw");
+      setSelectWidth(window.innerWidth < 600 ? "90vw" : "50vw");
     };
     window.addEventListener("resize", handleResize);
     return () => {

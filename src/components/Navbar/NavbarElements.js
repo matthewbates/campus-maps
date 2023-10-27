@@ -7,7 +7,6 @@ export const NavbarContainer = styled.div`
   z-index: 2;
   top: 0;
   position: sticky;
-
   @media screen and (max-width: 600px) {
     flex-direction: column;
   }
