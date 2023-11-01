@@ -15,7 +15,7 @@ export const Map = ({
   const [map, setMap] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const { isLoaded, loadError } = useJsApiLoader({
+  const { isLoaded } = useJsApiLoader({
     id: "google-maps-script",
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
@@ -33,23 +33,25 @@ export const Map = ({
   });
 
   return isLoaded ? (
-    <GoogleMap
-      options={mapOptions}
-      mapContainerStyle={containerStyle}
-      center={center}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      <Marker
-        map={map}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        displayMarker={displayMarker}
-        displayAllMarkers={displayAllMarkers}
-        selectedLocation={selectedLocation}
-        setSelectedLocation={setSelectedLocation}
-      />
-    </GoogleMap>
+    <div style={{ outline: "none" }}>
+      <GoogleMap
+        options={mapOptions}
+        mapContainerStyle={containerStyle}
+        center={center}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+        <Marker
+          map={map}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          displayMarker={displayMarker}
+          displayAllMarkers={displayAllMarkers}
+          selectedLocation={selectedLocation}
+          setSelectedLocation={setSelectedLocation}
+        />
+      </GoogleMap>
+    </div>
   ) : (
     <></>
   );

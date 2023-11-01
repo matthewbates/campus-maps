@@ -11,12 +11,8 @@ import {
 import { SidebarItems } from "../SidebarItem";
 import { toggleSidebar } from "../../utils/helpers";
 
-export const Sidebar = ({ isOpen, setIsOpen, name, img, address }) => {
+export const Sidebar = ({ isOpen, setIsOpen, name, images, address }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  const toggleMouse = () => {
-    setIsHovered(!isHovered);
-  };
 
   return (
     <SidebarContainer $isOpen={isOpen}>
@@ -34,7 +30,7 @@ export const Sidebar = ({ isOpen, setIsOpen, name, img, address }) => {
         />
         <SidebarTitle>{name}</SidebarTitle>
       </SidebarWrapper>
-      {<SidebarItems name={name} img={img} address={address} />}
+      {<SidebarItems name={name} images={images} address={address} />}
     </SidebarContainer>
   );
 };

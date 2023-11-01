@@ -2,10 +2,7 @@ import { InfoWindowF } from "@react-google-maps/api";
 
 export const Window = ({ coordinates, map, name }) => {
   return (
-    <InfoWindowF
-      anchor={map}
-      position={{ lat: coordinates.lat, lng: coordinates.lng }}
-    >
+    <InfoWindowF position={{ lat: coordinates.lat, lng: coordinates.lng }}>
       <div
         style={{
           fontWeight: "bold",

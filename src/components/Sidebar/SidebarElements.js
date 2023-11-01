@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const SidebarContainer = styled.div`
   position: fixed;
   left: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
+  top: ${({ isOpen }) => (isOpen ? "10px" : "0")};
   background: #212121;
   height: 100vh;
   width: 100%;
   font-family: "Roboto";
   transition: 0.3s ease;
+  overflow: auto;
 
   @media screen and (min-width: 768px) {
     width: 40%;

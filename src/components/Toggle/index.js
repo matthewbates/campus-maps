@@ -22,12 +22,12 @@ export const Toggle = ({
         control={<Switch onChange={toggleDisplay} />}
         label={toggleLabel()}
       ></FormControlLabel>
-      <Reset
+      {/* <Reset
         setDisplayAllMarkers={setDisplayAllMarkers}
         toggleDisplay={toggleDisplay}
         variant="contained"
         sx={{}}
-      />
+      /> */}
     </ToggleContainer>
   );
 };

@@ -24,7 +24,6 @@ export const SidebarItemImg = styled.img`
   border: 2px solid white;
 
   @media screen and (min-width: 600px) {
-    /* max-width: 100%; */
     max-height: 200px;
   }
 `;

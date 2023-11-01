@@ -22,7 +22,7 @@ export const Marker = ({
   return (
     <>
       {filteredLocations(displayAllMarkers, locations, selectedLocation).map(
-        ({ id, name, img, address, coordinates }) => (
+        ({ id, name, images, address, coordinates }) => (
           <MarkerF
             icon={{
               path: window.google.maps.SymbolPath.CIRCLE,
@@ -57,7 +57,7 @@ export const Marker = ({
             (selectedLocation === id && !displayMarker) ? (
               <Sidebar
                 name={name}
-                img={img}
+                images={images}
                 address={address}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
@@ -66,7 +66,7 @@ export const Marker = ({
               />
             ) : null}
 
-            {showInfoWindow === id && (
+            {showInfoWindow === id && !displayMarker && (
               <Window coordinates={coordinates} map={map} name={name} />
             )}
           </MarkerF>

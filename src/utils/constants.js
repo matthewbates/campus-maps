@@ -3,12 +3,12 @@ export const containerStyle = {
 };
 
 export const mapOptions = {
-  zoom: 17,
-  mapTypeControl: true,
+  zoom: 16,
+  mapTypeControl: false,
   zoomControl: false,
   fullscreenControl: false,
   streetViewControl: true,
-  mapTypeId: "satellite",
+  // mapTypeId: "satellite",
   // rotateControl: true,
   styles: [
     {
@@ -50,6 +50,7 @@ export const mapOptions = {
           visibility: "on",
         },
         {
+          // color: "#ef3340",
           color: "#a9a9a9",
         },
       ],

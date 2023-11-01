@@ -5,11 +5,18 @@ import {
   SidebarItemAddress,
 } from "./SidebarItemElements";
 
-export const SidebarItems = ({ name, img, address }) => {
+import { Carousel } from "../Carousel";
+
+export const SidebarItems = ({ name, images, address }) => {
   return (
     <SidebarItemContainer>
       <SidebarWrapper>
-        <SidebarItemImg src={img} alt={name} />
+        <Carousel images={images} name={name} />
+        {/* {Array.isArray(images) ? (
+          images.map((image) => <SidebarItemImg src={image} alt={name} />)
+        ) : (
+          <SidebarItemImg src={images} />
+        )} */}
         <SidebarItemAddress>{address}</SidebarItemAddress>
       </SidebarWrapper>
     </SidebarItemContainer>

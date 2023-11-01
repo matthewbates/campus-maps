@@ -2,15 +2,13 @@ import "./App.css";
 
 import { useState } from "react";
 
-import { Dropdown } from "./components/Dropdown";
 import { Map } from "./components/Map";
-import { Toggle } from "./components/Toggle";
 import { locations } from "./utils/locations";
 import { Navbar } from "./components/Navbar";
 
 const App = () => {
   const [displayMarker, setDisplayMarker] = useState(false);
-  const [displayAllMarkers, setDisplayAllMarkers] = useState(false);
+  const [displayAllMarkers, setDisplayAllMarkers] = useState(true);
   const [selectedLocation, setSelectedLocation] = useState(false);
 
   const toggleDisplay = () => {
@@ -34,16 +32,6 @@ const App = () => {
         setDisplayAllMarkers={setDisplayAllMarkers}
         toggleDisplay={toggleDisplay}
       />
-      {/* <Dropdown
-        selectedLocation={selectedLocation}
-        setSelectedLocation={setSelectedLocation}
-        handleMarkerSelection={handleMarkerSelection}
-      />
-      <Toggle
-        displayMarker={displayMarker}
-        displayAllMarkers={displayAllMarkers}
-        toggleDisplay={toggleDisplay}
-      /> */}
       <Map
         displayMarker={displayMarker}
         setDisplayMarker={setDisplayMarker}
