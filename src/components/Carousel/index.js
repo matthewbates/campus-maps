@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { CarouselContainer } from "./CarouselElements";
+import { CarouselItems } from "../CarouselItem";
 
-import { CarouselContainer, ArrowContainer } from "./CarouselElements";
-import { CarouselItems } from "../CarouselItems";
-
-export const Carousel = ({ images, name }) => {
+export const Carousel = ({ fullScreen, images, name }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -26,25 +23,14 @@ export const Carousel = ({ images, name }) => {
 
   return (
     <CarouselContainer>
-      <ArrowContainer>
-        <ArrowBackIosIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "2em",
-          }}
-          onClick={previousImg}
-        />
-      </ArrowContainer>
-      <CarouselItems images={images} name={name} activeIndex={activeIndex} />
-      <ArrowContainer>
-        <ArrowForwardIosIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "2em",
-          }}
-          onClick={nextImg}
-        />
-      </ArrowContainer>
+      <CarouselItems
+        fullScreen={fullScreen}
+        images={images}
+        name={name}
+        activeIndex={activeIndex}
+        previousImg={previousImg}
+        nextImg={nextImg}
+      />
     </CarouselContainer>
   );
 };

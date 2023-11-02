@@ -10,22 +10,9 @@ export const SidebarItemContainer = styled.div`
 export const SidebarWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+
   gap: 1em;
   padding: 1em;
-`;
-
-export const SidebarItemImg = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 300px;
-  border: 2px solid white;
-
-  @media screen and (min-width: 600px) {
-    max-height: 200px;
-  }
 `;
 
 export const SidebarItemTitle = styled.div`
@@ -36,5 +23,10 @@ export const SidebarItemTitle = styled.div`
 
 export const SidebarItemAddress = styled.div`
   color: #ffffff;
-  font-style: italic;
+`;
+
+export const SidebarInfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
