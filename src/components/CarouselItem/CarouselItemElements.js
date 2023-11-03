@@ -13,8 +13,8 @@ export const CarouselItemImg = styled.img`
   object-fit: cover;
   height: 250px;
   /* height: ${({ fullScreen }) => (fullScreen ? "100vh" : "250px")}; */
-  display: ${({ index, activeIndex }) =>
-    index === activeIndex ? "block" : "none"};
+  display: ${({ $index, $activeIndex }) =>
+    $index === $activeIndex ? "block" : "none"};
 
   @media screen and (min-width: 600px) {
     height: 300px;

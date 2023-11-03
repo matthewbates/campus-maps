@@ -25,9 +25,9 @@ export const CarouselItems = ({
       {Array.isArray(images) ? (
         images.map((image, index) => (
           <CarouselItemImg
-            fullScreen={fullScreen}
-            activeIndex={activeIndex}
-            index={index}
+            $fullScreen={fullScreen}
+            $activeIndex={activeIndex}
+            $index={index}
             key={index}
             src={image}
             alt={name}
