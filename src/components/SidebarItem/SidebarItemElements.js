@@ -22,7 +22,7 @@ export const SidebarItemTitle = styled.div`
 `;
 
 export const SidebarItemAddress = styled.div`
-  color: #ffffff;
+  /* color: #ffffff; */
 `;
 
 export const SidebarInfoWrapper = styled.div`

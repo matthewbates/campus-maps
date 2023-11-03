@@ -18,7 +18,7 @@ export const FullScreen = ({ toggle }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Tooltip title="Full screen">
+      <Tooltip title="Full screen" placement="top">
         <FullscreenIcon
           onClick={toggle}
           sx={{

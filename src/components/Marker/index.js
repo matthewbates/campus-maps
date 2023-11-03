@@ -25,18 +25,17 @@ export const Marker = ({
         ({ id, name, images, address, coordinates }) => (
           <MarkerF
             icon={{
-              path: window.google.maps.SymbolPath.CIRCLE,
+              path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
               fillColor: "white",
               fillOpacity: 1,
-              scale: window.innerWidth > 600 ? 10 : 8,
+              scale: 4,
               strokeColor: "#8a1538",
-              strokeWeight: 8,
             }}
             onMouseOver={() => {
-              setShowInfoWindow(id);
+              setTimeout(() => setShowInfoWindow(id), 250);
             }}
             onMouseOut={() => {
-              setShowInfoWindow(null);
+              setTimeout(() => setShowInfoWindow(null), 2500);
             }}
             onClick={() => {
               toggleSidebar(isOpen, setIsOpen);

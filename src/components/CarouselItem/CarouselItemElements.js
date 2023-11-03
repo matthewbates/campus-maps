@@ -8,17 +8,22 @@ export const CarouselItemContainer = styled.div`
 
 export const CarouselItemImg = styled.img`
   width: 100%;
+  /* position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px; */
   /* width; ${({ fullScreen }) => (fullScreen ? "100vw" : "100%")}; */
-  height: auto;
+  /* height: auto; */
   object-fit: cover;
-  height: 250px;
-  /* height: ${({ fullScreen }) => (fullScreen ? "100vh" : "250px")}; */
+  /* height: 250px; */
+  height: ${({ $fullScreen }) => ($fullScreen ? "100vh" : "250px")};
   display: ${({ $index, $activeIndex }) =>
     $index === $activeIndex ? "block" : "none"};
 
   @media screen and (min-width: 600px) {
     height: 300px;
-    /* height: ${({ fullScreen }) => (fullScreen ? "100vh" : "250px")}; */
+    height: ${({ $fullScreen }) => ($fullScreen ? "100vh" : "250px")};
   }
 `;
 
