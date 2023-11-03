@@ -33,7 +33,7 @@ export const Map = ({
   });
 
   return isLoaded ? (
-    <div style={{ outline: "none" }}>
+    <div style={{ outline: "none", border: "none" }}>
       <GoogleMap
         options={mapOptions}
         mapContainerStyle={containerStyle}

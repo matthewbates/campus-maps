@@ -42,7 +42,6 @@ export const Marker = ({
               setSelectedLocation(id);
             }}
             key={id}
-            //! add feature to clear selection so displayAllMarkers works
             position={
               displayMarker
                 ? {
