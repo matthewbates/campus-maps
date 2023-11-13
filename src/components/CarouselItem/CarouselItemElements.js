@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CarouselItemContainer = styled.div`
   flex: 1;
   display: flex;
+  justify-content: center;
   overflow: hidden;
 `;
 

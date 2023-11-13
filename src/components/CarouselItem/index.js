@@ -17,11 +17,9 @@ export const CarouselItems = ({
 }) => {
   return (
     <CarouselItemContainer>
-      {images.length > 1 ? (
-        <ArrowContainer onClick={previousImg}>
-          <ArrowBack previousImg={previousImg} />
-        </ArrowContainer>
-      ) : null}
+      <ArrowContainer onClick={previousImg}>
+        <ArrowBack previousImg={previousImg} />
+      </ArrowContainer>
       {Array.isArray(images) ? (
         images.map((image, index) => (
           <CarouselItemImg
@@ -34,7 +32,9 @@ export const CarouselItems = ({
           />
         ))
       ) : (
-        <CarouselItemImg src={images} alt={name} />
+        // ) : images.length >= 1 ? (
+        //   <img src={images} />
+        <div style={{ color: "#ffffff" }}>No images to display.</div>
       )}
       <ArrowContainer onClick={nextImg}>
         <ArrowForward nextImg={nextImg} />

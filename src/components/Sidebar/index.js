@@ -11,7 +11,15 @@ import {
 import { SidebarItems } from "../SidebarItem";
 import { toggleSidebar } from "../../utils/helpers";
 
-export const Sidebar = ({ isOpen, setIsOpen, name, images, address }) => {
+export const Sidebar = ({
+  isOpen,
+  setIsOpen,
+  name,
+  images,
+  address,
+  information,
+  website,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -30,7 +38,15 @@ export const Sidebar = ({ isOpen, setIsOpen, name, images, address }) => {
         />
         <SidebarTitle>{name}</SidebarTitle>
       </SidebarWrapper>
-      {<SidebarItems name={name} images={images} address={address} />}
+      {
+        <SidebarItems
+          name={name}
+          images={images}
+          address={address}
+          information={information}
+          website={website}
+        />
+      }
     </SidebarContainer>
   );
 };

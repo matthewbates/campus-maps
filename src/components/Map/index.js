@@ -30,7 +30,7 @@ export const Map = ({
 
   const onUnmount = useCallback(() => {
     setMap(null);
-  });
+  }, []);
 
   return isLoaded ? (
     <div style={{ outline: "none", border: "none" }}>

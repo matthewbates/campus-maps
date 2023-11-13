@@ -22,7 +22,7 @@ export const Marker = ({
   return (
     <>
       {filteredLocations(displayAllMarkers, locations, selectedLocation).map(
-        ({ id, name, images, address, coordinates }) => (
+        ({ id, name, images, address, coordinates, information, website }) => (
           <MarkerF
             icon={{
               path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
@@ -57,6 +57,8 @@ export const Marker = ({
                 name={name}
                 images={images}
                 address={address}
+                information={information}
+                website={website}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 displayMarker={displayMarker}

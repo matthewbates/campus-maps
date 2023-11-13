@@ -65,6 +65,9 @@ export const locations = [
     category: "administrative",
     address: "2150 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.677979, lng: -104.961853 },
+    information:
+      "Formerly the Penrose Library, the Anderson Academic Commons is the latest architectural addition to the University of Denver. The Commons acts as the educational heart and hub of our campus, with new and improved spaces for students and faculty to engage in scholarship and discussion.",
+    website: "https://library.du.edu/",
   },
   {
     id: 2,
@@ -73,14 +76,17 @@ export const locations = [
     category: "administrative",
     address: " 2450 S Vine St, Denver, CO 80210",
     coordinates: { lat: 39.672173, lng: -104.96261 },
+    information: "",
+    website: "https://psychology.du.edu/",
   },
   {
     id: 3,
-    images: UNIVERSITY_OFFICE_ANNEX,
+    images: [UNIVERSITY_OFFICE_ANNEX],
     name: "University Office Annex (ANNEX)",
     category: "administrative",
     address: "2190 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676907, lng: -104.964951 },
+    information: "",
   },
   {
     id: 5,
@@ -89,6 +95,7 @@ export const locations = [
     category: "administrative",
     address: "Boettcher West, Denver, CO 80210",
     coordinates: { lat: 39.67407, lng: -104.962825 },
+    information: "",
   },
   {
     id: 7,
@@ -97,6 +104,7 @@ export const locations = [
     category: "administrative",
     address: "2210 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.675732, lng: -104.961761 },
+    information: "",
   },
   {
     id: 8,
@@ -105,6 +113,7 @@ export const locations = [
     category: "administrative",
     address: "Buchtel Memorial Tower, Denver, CO 80210",
     coordinates: { lat: 39.677891, lng: -104.960999 },
+    information: "",
   },
   {
     id: 9,
@@ -113,6 +122,7 @@ export const locations = [
     category: "administrative",
     address: "1984 Buchtel Blvd S, Denver, CO 80210, USA",
     coordinates: { lat: 39.683323, lng: -104.963661 },
+    information: "",
   },
   {
     id: 10,
@@ -121,6 +131,7 @@ export const locations = [
     category: "administrative",
     address: "1901 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680687, lng: -104.964882 },
+    information: "",
   },
   {
     id: 11,
@@ -129,6 +140,7 @@ export const locations = [
     category: "administrative",
     address: "2390 S York St, Denver, CO 80210",
     coordinates: { lat: 39.67345, lng: -104.960365 },
+    information: "",
   },
   {
     id: 12,
@@ -137,6 +149,7 @@ export const locations = [
     category: "administrative",
     address: "2930 E Warren Ave, Denver, CO 8021",
     coordinates: { lat: 39.67609, lng: -104.952988 },
+    information: "",
   },
   {
     id: 13,
@@ -145,6 +158,7 @@ export const locations = [
     category: "administrative",
     address: "2120 S High St, Denver, CO 80210",
     coordinates: { lat: 39.677757, lng: -104.964897 },
+    information: "",
   },
   {
     id: 14,
@@ -153,6 +167,7 @@ export const locations = [
     category: "administrative",
     address: "2130 S High St, Denver, CO 80210",
     coordinates: { lat: 39.67785, lng: -104.964394 },
+    information: "",
   },
   {
     id: 15,
@@ -161,6 +176,7 @@ export const locations = [
     category: "administrative",
     address: "2101 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.677612, lng: -104.959816 },
+    information: "",
   },
   {
     id: 16,
@@ -169,6 +185,7 @@ export const locations = [
     category: "administrative",
     address: "2050 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678089, lng: -104.963249 },
+    information: "",
   },
   {
     id: 17,
@@ -177,6 +194,7 @@ export const locations = [
     category: "administrative",
     address: "1958 S Josephine St, Denver, CO 80210",
     coordinates: { lat: 39.680954, lng: -104.957474 },
+    information: "",
   },
   {
     id: 18,
@@ -185,6 +203,7 @@ export const locations = [
     category: "administrative",
     address: "2199 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.676624, lng: -104.963089 },
+    information: "",
   },
   {
     id: 19,
@@ -193,6 +212,7 @@ export const locations = [
     category: "administrative",
     address: "2155 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.677197, lng: -104.964371 },
+    information: "",
   },
   {
     id: 20,
@@ -201,6 +221,7 @@ export const locations = [
     category: "administrative",
     address: "1899 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678978, lng: -104.9655 },
+    information: "",
   },
   {
     id: 21,
@@ -209,6 +230,7 @@ export const locations = [
     category: "administrative",
     address: "2430 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.67268, lng: -104.963852 },
+    information: "",
   },
   {
     id: 22,
@@ -217,6 +239,7 @@ export const locations = [
     category: "administrative",
     address: "Centennial Halls, Denver, CO 80210",
     coordinates: { lat: 39.682724, lng: -104.964607 },
+    information: "",
   },
   {
     id: 23,
@@ -225,6 +248,7 @@ export const locations = [
     category: "administrative",
     address: "2044 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.677479, lng: -104.963165 },
+    information: "",
   },
   {
     id: 24,
@@ -233,6 +257,7 @@ export const locations = [
     category: "administrative",
     address: "2200 S Josephine St, Denver, CO 80210",
     coordinates: { lat: 39.676399, lng: -104.95752 },
+    information: "",
   },
   {
     id: 25,
@@ -241,6 +266,7 @@ export const locations = [
     category: "administrative",
     address: "1901 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.675282, lng: -104.964241 },
+    information: "",
   },
   {
     id: 26,
@@ -249,6 +275,7 @@ export const locations = [
     category: "administrative",
     address: "1999 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678913, lng: -104.964737 },
+    information: "",
   },
   {
     id: 27,
@@ -257,6 +284,7 @@ export const locations = [
     category: "administrative",
     address: "2255 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.679352, lng: -104.961266 },
+    information: "",
   },
   {
     id: 28,
@@ -265,6 +293,7 @@ export const locations = [
     category: "administrative",
     address: "2490 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.671513, lng: -104.961426 },
+    information: "",
   },
   {
     id: 29,
@@ -273,6 +302,7 @@ export const locations = [
     category: "administrative",
     address: "1981 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.680637, lng: -104.959831 },
+    information: "",
   },
   {
     id: 30,
@@ -281,6 +311,7 @@ export const locations = [
     category: "administrative",
     address: "2450 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.67231, lng: -104.961479 },
+    information: "",
   },
   {
     id: 31,
@@ -289,6 +320,7 @@ export const locations = [
     category: "administrative",
     address: "2199 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.67664, lng: -104.961433 },
+    information: "",
   },
   {
     id: 32,
@@ -297,6 +329,7 @@ export const locations = [
     category: "administrative",
     address: "Margery Reed Bldg, Denver, CO 80210",
     coordinates: { lat: 39.678139, lng: -104.960396 },
+    information: "",
   },
   {
     id: 33,
@@ -305,6 +338,7 @@ export const locations = [
     category: "administrative",
     address: "2194 S High St, Denver, CO 80210",
     coordinates: { lat: 39.677086, lng: -104.963951 },
+    information: "",
   },
   {
     id: 34,
@@ -313,6 +347,7 @@ export const locations = [
     category: "administrative",
     address: "2201 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.681187, lng: -104.962341 },
+    information: "",
   },
   {
     id: 35,
@@ -321,6 +356,7 @@ export const locations = [
     category: "administrative",
     address: "2220 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676388, lng: -104.964691 },
+    information: "",
   },
   {
     id: 36,
@@ -329,6 +365,7 @@ export const locations = [
     category: "administrative",
     address: "2344 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.674297, lng: -104.96003 },
+    information: "",
   },
   {
     id: 37,
@@ -337,6 +374,7 @@ export const locations = [
     category: "administrative",
     address: "2190 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.674374, lng: -104.962112 },
+    information: "",
   },
   {
     id: 38,
@@ -345,6 +383,7 @@ export const locations = [
     category: "administrative",
     address: "2200 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.67284, lng: -104.961494 },
+    information: "",
   },
   {
     id: 40,
@@ -353,6 +392,7 @@ export const locations = [
     category: "administrative",
     address: "2040 S York St, Denver, CO 80210",
     coordinates: { lat: 39.678783, lng: -104.960281 },
+    information: "",
   },
   {
     id: 41,
@@ -361,6 +401,7 @@ export const locations = [
     category: "administrative",
     address: "2121 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680679, lng: -104.96244 },
+    information: "",
   },
   {
     id: 42,
@@ -369,6 +410,7 @@ export const locations = [
     category: "administrative",
     address: "2101 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.673538, lng: -104.962753 },
+    information: "",
   },
   {
     id: 43,
@@ -377,6 +419,7 @@ export const locations = [
     category: "administrative",
     address: "2201 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.676109, lng: -104.962372 },
+    information: "",
   },
   {
     id: 44,
@@ -385,6 +428,7 @@ export const locations = [
     category: "administrative",
     address: "Sturm Hall, Denver, CO 80210",
     coordinates: { lat: 39.67962, lng: -104.9634 },
+    information: "",
   },
   {
     id: 45,
@@ -393,6 +437,7 @@ export const locations = [
     category: "administrative",
     address: "1701 S High St, Denver, CO 80210, USA",
     coordinates: { lat: 39.684505, lng: -104.965813 },
+    information: "",
   },
   {
     id: 47,
@@ -401,6 +446,7 @@ export const locations = [
     category: "administrative",
     address: "2197 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.677059, lng: -104.960587 },
+    information: "",
   },
   {
     id: 48,
@@ -409,6 +455,7 @@ export const locations = [
     category: "administrative",
     address: "2100 S High St, Denver, CO 80210",
     coordinates: { lat: 39.678291, lng: -104.964874 },
+    information: "",
   },
   {
     id: 49,
@@ -417,6 +464,7 @@ export const locations = [
     category: "administrative",
     address: "2135 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.67326, lng: -104.96209 },
+    information: "",
   },
   {
     id: 50,
@@ -425,6 +473,7 @@ export const locations = [
     category: "administrative",
     address: "2070 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.6782909, lng: -104.9626586 },
+    information: "",
   },
   {
     id: 51,
@@ -433,6 +482,7 @@ export const locations = [
     category: "administrative",
     address: "2045 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.6799028, lng: -104.9643389 },
+    information: "",
   },
   {
     id: 52,
@@ -441,6 +491,7 @@ export const locations = [
     category: "administrative",
     address: "2190 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680046, lng: -104.962036 },
+    information: "",
   },
   {
     id: 53,
@@ -449,6 +500,17 @@ export const locations = [
     category: "athletics",
     address: "2240 Buchtel Blvd S, Denver, CO 80210",
     coordinates: { lat: 39.682053, lng: -104.962036 },
+    information: "",
+  },
+  {
+    id: 54,
+    name: "Health & Counseling Center (HCC)",
+    images: [],
+    address: "2240 E Buchtel Blvd Unit 3N, Denver, CO 80208",
+    coordinates: { lat: 39.682487, lng: -104.962173 },
+    information:
+      "The Health & Counseling Center provides a wide range of medical and mental health services. All students enrolled for academic credit may use the HCC.",
+    website: "https://www.du.edu/duhealth",
   },
 ];
 

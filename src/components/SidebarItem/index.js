@@ -11,7 +11,13 @@ import { Carousel } from "../Carousel";
 import { FullScreen } from "../FullScreen";
 import { Tabs } from "../Tabs";
 
-export const SidebarItems = ({ name, images, address }) => {
+export const SidebarItems = ({
+  name,
+  images,
+  address,
+  information,
+  website,
+}) => {
   const [fullScreen, setFullScreen] = useState(false);
 
   const toggleFullScreen = () => {
@@ -22,7 +28,13 @@ export const SidebarItems = ({ name, images, address }) => {
     <SidebarItemContainer>
       <SidebarWrapper>
         <Carousel fullScreen={fullScreen} images={images} name={name} />
-        <Tabs toggle={toggleFullScreen} address={address} />
+        <Tabs
+          images={images}
+          toggle={toggleFullScreen}
+          address={address}
+          information={information}
+          website={website}
+        />
       </SidebarWrapper>
     </SidebarItemContainer>
   );
