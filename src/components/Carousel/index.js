@@ -9,7 +9,7 @@ export const Carousel = ({ fullScreen, images, name }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === images.length - 1 ? 0 : activeIndex + 1);
-    }, 5500);
+    }, 7500);
     return () => clearInterval(interval);
   }, [activeIndex]);
 

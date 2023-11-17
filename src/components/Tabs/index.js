@@ -1,11 +1,15 @@
 import { useState } from "react";
 
 import { Box, Tab } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { TabContext, TabList } from "@mui/lab";
 
 import { TabWrapper, TabWrapperItem } from "./TabElements";
 
 import { FullScreen } from "../FullScreen";
+import { TabsPanel } from "../TabsPanel";
+
+const TARGET = "_blank";
+const REL = "noopener noreferrer";
 
 export const Tabs = ({ address, toggle, information, website }) => {
   const [tabValue, setTabValue] = useState("1");
@@ -33,42 +37,26 @@ export const Tabs = ({ address, toggle, information, website }) => {
         </TabList>
         <FullScreen toggle={toggle} />
       </Box>
-      <TabPanel
-        value="2"
-        sx={{
-          display: "flex",
-          textAlign: "justify",
-          flexDirection: "column",
-          gap: "1.5em",
-        }}
-      >
+      <TabsPanel>
         <TabWrapper>
-          {typeof information === "string" && information === "" ? (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                color: "#ffffff",
-              }}
-            >
-              Information coming soon!
-            </div>
+          {information === "" ? (
+            <div>Information coming soon!</div>
           ) : (
             <TabWrapperItem>{information}</TabWrapperItem>
           )}
           <div></div>
           <TabWrapperItem>{address}</TabWrapperItem>
           <TabWrapperItem>
-            <a
-              href="https://www.du.edu/duhealth"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {website}
-            </a>
+            {typeof website === "string" && website === "" ? (
+              <>Website coming soon!</>
+            ) : (
+              <a href={website} target={TARGET} rel={REL}>
+                {website}
+              </a>
+            )}
           </TabWrapperItem>
         </TabWrapper>
-      </TabPanel>
+      </TabsPanel>
     </TabContext>
   );
 };

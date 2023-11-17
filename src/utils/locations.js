@@ -13,10 +13,13 @@ import BURWELL_CENTER_1 from "../assets/buildings/burwell_center_1.jpeg";
 import BURWELL_CENTER_2 from "../assets/buildings/burwell_center_2.jpeg";
 import CABLE_CENTER_1 from "../assets/buildings/cable_center_1.jpeg";
 import CABLE_CENTER_2 from "../assets/buildings/cable_center_2.jpeg";
+import CAMPUS_SAFETY from "../assets/buildings/campus_safety.jpeg";
+import CENTENNIAL_HALLS from "../assets/buildings/centennial_halls.jpeg";
 import CENTENNIAL_TOWERS_1 from "../assets/buildings/centennial_towers_1.jpeg";
 import CENTENNIAL_TOWERS_2 from "../assets/buildings/centennial_towers_2.jpeg";
 import CHAMBERS_CENTER_1 from "../assets/buildings/chambers_center_1.jpeg";
 import CHAMBERS_CENTER_2 from "../assets/buildings/chambers_center_2.jpeg";
+import CHAMBERLIN_OBSERVATORY from "../assets/buildings/chamberlin_observatory.png";
 import CLARENCE_KNUDSON_HALL_1 from "../assets/buildings/clarence_knudson_hall_1.jpeg";
 import CLARENCE_KNUDSON_HALL_2 from "../assets/buildings/clarence_knudson_hall_2.jpeg";
 import COMMUNITY_COMMONS_1 from "../assets/buildings/community_commons_1.png";
@@ -29,8 +32,15 @@ import DIAMOND_FAMILY_1 from "../assets/buildings/diamond_family_1.jpeg";
 import DIAMOND_FAMILY_2 from "../assets/buildings/diamond_family_2.jpeg";
 import DRISCOLL_CENTER_1 from "../assets/buildings/driscoll_center_1.jpeg";
 import DRISCOLL_CENTER_2 from "../assets/buildings/driscoll_center_2.jpeg";
+import ELC from "../assets/buildings/english_language_center.jpeg";
 import EVANS_MEMORIAL_CHAPEL_1 from "../assets/buildings/evans_memorial_chapel_1.jpeg";
 import EVANS_MEMORIAL_CHAPEL_2 from "../assets/buildings/evans_memorial_chapel_2.jpeg";
+import FSC_1 from "../assets/buildings/fsc_1.jpeg";
+import FSC_2 from "../assets/buildings/fsc_2.jpeg";
+import FISHER from "../assets/buildings/fisher_learning_center.jpeg";
+import FRONTIER_HALL from "../assets/buildings/frontier_hall.jpeg";
+import IT from "../assets/buildings/information_technology.jpeg";
+import JMH from "../assets/buildings/johnson_mcfarlane_hall.jpeg";
 import LAW_1 from "../assets/buildings/law_1.jpeg";
 import LAW_2 from "../assets/buildings/law_2.jpeg";
 import MARY_REED_1 from "../assets/buildings/mary_reed_1.jpeg";
@@ -41,6 +51,7 @@ import NAGEL_HALL_1 from "../assets/buildings/nagel_hall_1.jpeg";
 import NAGEL_HALL_2 from "../assets/buildings/nagel_hall_2.jpeg";
 import OLIN_HALL_1 from "../assets/buildings/olin_hall_1.jpeg";
 import OLIN_HALL_2 from "../assets/buildings/olin_hall_2.jpeg";
+import RICKS_CENTER from "../assets/buildings/ricks_center.jpeg";
 import RITCHIE_CENTER_1 from "../assets/buildings/ritchie_center_1.jpeg";
 import RITCHIE_CENTER_2 from "../assets/buildings/ritchie_center_2.png";
 import RUFFATTO_HALL_1 from "../assets/buildings/ruffatto_hall_1.jpeg";
@@ -56,6 +67,7 @@ import STURM_HALL_2 from "../assets/buildings/sturm_hall_2.webp";
 import UNIVERSITY_HALL_1 from "../assets/buildings/university_hall_1.jpeg";
 import UNIVERSITY_HALL_2 from "../assets/buildings/university_hall_2.jpeg";
 import UNIVERSITY_OFFICE_ANNEX from "../assets/buildings/university_office_annex.jpeg";
+import WESLEY_HALL from "../assets/buildings/wesley_hall.jpeg";
 
 export const locations = [
   {
@@ -87,15 +99,17 @@ export const locations = [
     address: "2190 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676907, lng: -104.964951 },
     information: "",
+    website: "",
   },
   {
     id: 5,
     images: [BOETTCHER_AUD_1, BOETTCHER_AUD_2],
     name: "Boettcher Center Auditorium (BAUD)",
     category: "administrative",
-    address: "Boettcher West, Denver, CO 80210",
+    address: "2050 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.67407, lng: -104.962825 },
     information: "",
+    website: "",
   },
   {
     id: 7,
@@ -105,6 +119,7 @@ export const locations = [
     address: "2210 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.675732, lng: -104.961761 },
     information: "",
+    website: "",
   },
   {
     id: 8,
@@ -114,6 +129,7 @@ export const locations = [
     address: "Buchtel Memorial Tower, Denver, CO 80210",
     coordinates: { lat: 39.677891, lng: -104.960999 },
     information: "",
+    website: "",
   },
   {
     id: 9,
@@ -123,6 +139,7 @@ export const locations = [
     address: "1984 Buchtel Blvd S, Denver, CO 80210, USA",
     coordinates: { lat: 39.683323, lng: -104.963661 },
     information: "",
+    website: "",
   },
   {
     id: 10,
@@ -132,6 +149,7 @@ export const locations = [
     address: "1901 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680687, lng: -104.964882 },
     information: "",
+    website: "",
   },
   {
     id: 11,
@@ -141,15 +159,18 @@ export const locations = [
     address: "2390 S York St, Denver, CO 80210",
     coordinates: { lat: 39.67345, lng: -104.960365 },
     information: "",
+    website: "",
   },
   {
     id: 12,
-    // images: require("../assets/buildings/chamberlin_observatory.jpeg"),
+    images: [CHAMBERLIN_OBSERVATORY],
     name: "Chamberlin Observatory (COBS)",
     category: "administrative",
     address: "2930 E Warren Ave, Denver, CO 8021",
     coordinates: { lat: 39.67609, lng: -104.952988 },
-    information: "",
+    information:
+      "DU owns and operates the Chamberlin Observatory, located just a few blocks from campus at Observatory Park. The Chamberlin Observatory has been open for more than 120 years and hosts a variety of public outreach events each week. Established in 1890, the observatory and its 20-inch refracting telescope are managed and cared for by the Department of Physics and Astronomy.",
+    website: "https://science.du.edu/physics/chamberlin-observatory",
   },
   {
     id: 13,
@@ -159,15 +180,17 @@ export const locations = [
     address: "2120 S High St, Denver, CO 80210",
     coordinates: { lat: 39.677757, lng: -104.964897 },
     information: "",
+    website: "",
   },
   {
     id: 14,
-    images: require("../assets/buildings/campus_safety.jpeg"),
+    images: [CAMPUS_SAFETY],
     name: "Campus Safety & Parking Services (SAFE)",
     category: "administrative",
     address: "2130 S High St, Denver, CO 80210",
     coordinates: { lat: 39.67785, lng: -104.964394 },
     information: "",
+    website: "https://www.du.edu/campussafety",
   },
   {
     id: 15,
@@ -177,24 +200,28 @@ export const locations = [
     address: "2101 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.677612, lng: -104.959816 },
     information: "",
+    website:
+      "https://daniels.du.edu/?gad=1&gclid=CjwKCAiA0syqBhBxEiwAeNx9N2r-3FCTfO_Dz2asrqlBnLtBMtwmHVzi4U_xhPxCgXNOvJLN11062hoCLc4QAvD_BwE",
   },
   {
     id: 16,
     images: [DRISCOLL_CENTER_1, DRISCOLL_CENTER_2],
-    name: "Driscoll Center South (DS)",
+    name: "Driscoll Commons (DC)",
     category: "administrative",
     address: "2050 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678089, lng: -104.963249 },
     information: "",
+    website: "https://studentaffairs.du.edu/Driscoll-Community-Commons",
   },
   {
     id: 17,
-    images: require("../assets/buildings/english_language_center.jpeg"),
+    images: [ELC],
     name: "English Language Center (ELC)",
     category: "administrative",
     address: "1958 S Josephine St, Denver, CO 80210",
     coordinates: { lat: 39.680954, lng: -104.957474 },
     information: "",
+    website: "",
   },
   {
     id: 18,
@@ -204,42 +231,49 @@ export const locations = [
     address: "2199 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.676624, lng: -104.963089 },
     information: "",
+    website: "",
   },
   {
     id: 19,
-    images: require("../assets/buildings/frontier_hall.jpeg"),
+    images: [FRONTIER_HALL],
     name: "Frontier Hall (FH)",
     category: "administrative",
     address: "2155 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.677197, lng: -104.964371 },
     information: "",
+    website: "",
   },
   {
     id: 20,
-    images: require("../assets/buildings/fisher_learning_center.jpeg"),
+    images: [FISHER],
     name: "Fisher Early Learning Center (FISH)",
     category: "administrative",
     address: "1899 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678978, lng: -104.9655 },
     information: "",
+    website: "https://morgridge.du.edu/fisher",
   },
   {
     id: 21,
-    images: require("../assets/buildings/facilities_service_center.jpeg"),
+    images: [FSC_1, FSC_2],
     name: "Facilities Service Center (FAC)",
     category: "administrative",
     address: "2430 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.67268, lng: -104.963852 },
     information: "",
+    website: "https://www.du.edu/facilities",
   },
   {
     id: 22,
-    images: require("../assets/buildings/centennial_halls.jpeg"),
+    images: [CENTENNIAL_HALLS],
     name: "Centennial Halls (HALLS)",
     category: "administrative",
     address: "Centennial Halls, Denver, CO 80210",
     coordinates: { lat: 39.682724, lng: -104.964607 },
-    information: "",
+    information:
+      "Centennial Halls, or just Halls, is next door to Ritchie Center, steps away from the light rail station, and a short walk to Sturm Hall and Community Commons. Halls is our largest residence hall for first-year students. Walk to a game in two minutes and catch a movie in the plush lounge. Halls also features a state of the art cashierless market in the building. Centennial Halls is for first-year students.",
+    website:
+      "https://studentaffairs.du.edu/housing/places-to-live/centennial-halls",
   },
   {
     id: 23,
@@ -249,6 +283,7 @@ export const locations = [
     address: "2044 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.677479, lng: -104.963165 },
     information: "",
+    website: "",
   },
   {
     id: 24,
@@ -258,15 +293,18 @@ export const locations = [
     address: "2200 S Josephine St, Denver, CO 80210",
     coordinates: { lat: 39.676399, lng: -104.95752 },
     information: "",
+    website: "",
   },
   {
     id: 25,
-    images: require("../assets/buildings/johnson_mcfarlane_hall.jpeg"),
+    images: [JMH],
     name: "Johnson-McFarlane Hall (JMAC)",
     category: "administrative",
     address: "1901 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.675282, lng: -104.964241 },
     information: "",
+    website:
+      "https://studentaffairs.du.edu/housing/places-to-live/johnson-mcfarlane-hall-j-mac",
   },
   {
     id: 26,
@@ -276,6 +314,7 @@ export const locations = [
     address: "1999 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.678913, lng: -104.964737 },
     information: "",
+    website: "",
   },
   {
     id: 27,
@@ -285,6 +324,7 @@ export const locations = [
     address: "2255 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.679352, lng: -104.961266 },
     information: "",
+    website: "",
   },
   {
     id: 28,
@@ -294,6 +334,7 @@ export const locations = [
     address: "2490 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.671513, lng: -104.961426 },
     information: "",
+    website: "",
   },
   {
     id: 29,
@@ -303,6 +344,7 @@ export const locations = [
     address: "1981 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.680637, lng: -104.959831 },
     information: "",
+    website: "",
   },
   {
     id: 30,
@@ -312,6 +354,7 @@ export const locations = [
     address: "2450 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.67231, lng: -104.961479 },
     information: "",
+    website: "",
   },
   {
     id: 31,
@@ -321,6 +364,7 @@ export const locations = [
     address: "2199 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.67664, lng: -104.961433 },
     information: "",
+    website: "",
   },
   {
     id: 32,
@@ -330,6 +374,7 @@ export const locations = [
     address: "Margery Reed Bldg, Denver, CO 80210",
     coordinates: { lat: 39.678139, lng: -104.960396 },
     information: "",
+    website: "",
   },
   {
     id: 33,
@@ -338,7 +383,9 @@ export const locations = [
     category: "administrative",
     address: "2194 S High St, Denver, CO 80210",
     coordinates: { lat: 39.677086, lng: -104.963951 },
-    information: "",
+    information:
+      "Nagel Hall is centrally located, near many academic buildings and Anderson Academic Commons. It's also next door to Nelson Hall, another community of second-year students. You'll live in a suite with two double rooms or an apartment with a kitchen, living room, and four single rooms. The Nagel Hall Market food court is convenient and delicious. Nagel Hall is for second-year students",
+    website: "https://studentaffairs.du.edu/housing/places-to-live/nagel-hall",
   },
   {
     id: 34,
@@ -348,6 +395,7 @@ export const locations = [
     address: "2201 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.681187, lng: -104.962341 },
     information: "",
+    website: "",
   },
   {
     id: 35,
@@ -356,7 +404,9 @@ export const locations = [
     category: "administrative",
     address: "2220 S High St, Denver, CO 80210",
     coordinates: { lat: 39.676388, lng: -104.964691 },
-    information: "",
+    information:
+      "At Nelson Hall, you'll be part of a large community of second-year students. Nelson is near Anderson Academic Commons and many academic buildings. The dining hall is spacious and bright. Nelson is all suites. Each suite has two to four bedrooms and suite mates share a bathroom and a common entry space. The first through fourth floors have community kitchens and study lounges. Apartments on the fifth floor include kitchens, living rooms, and two to four bedrooms. Nelson Hall is for second-year students.",
+    website: "https://studentaffairs.du.edu/housing/places-to-live/nelson-hall",
   },
   {
     id: 36,
@@ -366,6 +416,7 @@ export const locations = [
     address: "2344 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.674297, lng: -104.96003 },
     information: "",
+    website: "",
   },
   {
     id: 37,
@@ -375,6 +426,7 @@ export const locations = [
     address: "2190 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.674374, lng: -104.962112 },
     information: "",
+    website: "",
   },
   {
     id: 38,
@@ -384,15 +436,18 @@ export const locations = [
     address: "2200 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.67284, lng: -104.961494 },
     information: "",
+    website: "",
   },
   {
     id: 40,
-    images: require("../assets/buildings/ricks_center.jpeg"),
+    images: [RICKS_CENTER],
     name: "Ricks Center for Gifted Children (RICKS)",
     category: "administrative",
     address: "2040 S York St, Denver, CO 80210",
     coordinates: { lat: 39.678783, lng: -104.960281 },
-    information: "",
+    information:
+      "The Ricks Center for Gifted Children is a school for chidren ages three years old through eighth grade who demonstrate exceptional abilities.",
+    website: "http://www.du.edu/ricks",
   },
   {
     id: 41,
@@ -401,7 +456,9 @@ export const locations = [
     category: "administrative",
     address: "2121 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680679, lng: -104.96244 },
-    information: "",
+    information:
+      "The Shwayder Art Building contains the Myhren Gallery, which offers several exhibits throughout the year. The gallery is free and open to the public when exhibits are in session.",
+    website: "https://liberalarts.du.edu/art",
   },
   {
     id: 42,
@@ -411,6 +468,7 @@ export const locations = [
     address: "2101 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.673538, lng: -104.962753 },
     information: "",
+    website: "",
   },
   {
     id: 43,
@@ -420,6 +478,7 @@ export const locations = [
     address: "2201 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.676109, lng: -104.962372 },
     information: "",
+    website: "https://korbel.du.edu/sie",
   },
   {
     id: 44,
@@ -429,6 +488,7 @@ export const locations = [
     address: "Sturm Hall, Denver, CO 80210",
     coordinates: { lat: 39.67962, lng: -104.9634 },
     information: "",
+    website: "",
   },
   {
     id: 45,
@@ -437,7 +497,10 @@ export const locations = [
     category: "administrative",
     address: "1701 S High St, Denver, CO 80210, USA",
     coordinates: { lat: 39.684505, lng: -104.965813 },
-    information: "",
+    information:
+      "Centennial Towers, or just Towers, is all suites and located on the north end of campus. It is close to the Ritchie Center athletic facilities, as well as Interstate 25 and the light rail station. Each suite has two large bedrooms and a shared bathroom and kitchen. Towers is one of the residence halls open during the winter break. Centennial Towers (Nagel Hall and Nelson Hall) are for second-year students.",
+    website:
+      "https://studentaffairs.du.edu/housing/places-to-live/centennial-towers",
   },
   {
     id: 47,
@@ -447,24 +510,28 @@ export const locations = [
     address: "2197 S University Blvd, Denver, CO 80210",
     coordinates: { lat: 39.677059, lng: -104.960587 },
     information: "",
+    website: "",
   },
   {
     id: 48,
-    images: require("../assets/buildings/information_technology.jpeg"),
+    images: [IT],
     name: "Information Technology (IT)",
     category: "administrative",
     address: "2100 S High St, Denver, CO 80210",
     coordinates: { lat: 39.678291, lng: -104.964874 },
-    information: "",
+    information:
+      "Information Technology's primary mission is to deliver reliable, secure, and high quality services to University constituents, in addition to providing the greatest value and supporting the objectives and strategies of the institution. Our goal is to exceed expectations in providing easy-to-use, seamless, and safe technologies; supporting easy communication methods; and making available intuitive and useful access to information and services to enable success for academic outcomes.",
+    website: "https://www.du.edu/it/",
   },
   {
     id: 49,
-    images: require("../assets/buildings/wesley_hall.jpeg"),
+    images: [WESLEY_HALL],
     name: "Wesley Hall (WH)",
     category: "administrative",
     address: "2135 E Wesley Ave, Denver, CO 80210",
     coordinates: { lat: 39.67326, lng: -104.96209 },
     information: "",
+    website: "",
   },
   {
     id: 50,
@@ -474,6 +541,7 @@ export const locations = [
     address: "2070 E Evans Ave, Denver, CO 80210",
     coordinates: { lat: 39.6782909, lng: -104.9626586 },
     information: "",
+    website: "https://studentaffairs.du.edu/stay-involved/community-commons",
   },
   {
     id: 51,
@@ -482,7 +550,10 @@ export const locations = [
     category: "administrative",
     address: "2045 S Race St, Denver, CO 80210",
     coordinates: { lat: 39.6799028, lng: -104.9643389 },
-    information: "",
+    information:
+      "Opened in 2020, the Dimond Family Residential Village is close to Community Commons, Sturm Hall, and Anderson Academic Commons. At DFRV, you'll live with fellow First Years in your pod, a community within a community. Each pod has 20 rooms and its own lounge, And when you want to cook a meal meal with your friends, head to the Village Kitchen on the ground floor, one of many common areas built to make you feel at home. Diamond Family Residential Village (Centennial Halls and Johnson & McFarlane) are for first-year students.",
+    website:
+      "https://studentaffairs.du.edu/housing/places-to-live/dimond-family-residential-village",
   },
   {
     id: 52,
@@ -491,7 +562,9 @@ export const locations = [
     category: "administrative",
     address: "2190 E Asbury Ave, Denver, CO 80210",
     coordinates: { lat: 39.680046, lng: -104.962036 },
-    information: "",
+    information:
+      "Opened in August 2020, the Burwell Center for Career Achievement serves as a centralized hub to facilitate connections throughout the DU community—specifically focused on student career development, employer engagement and alumni activities.",
+    website: "https://career.du.edu/burwell-center/",
   },
   {
     id: 53,
@@ -501,6 +574,7 @@ export const locations = [
     address: "2240 Buchtel Blvd S, Denver, CO 80210",
     coordinates: { lat: 39.682053, lng: -104.962036 },
     information: "",
+    website: "https://ritchiecenter.du.edu/",
   },
   {
     id: 54,

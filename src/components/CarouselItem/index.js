@@ -20,7 +20,7 @@ export const CarouselItems = ({
       <ArrowContainer onClick={previousImg}>
         <ArrowBack previousImg={previousImg} />
       </ArrowContainer>
-      {Array.isArray(images) ? (
+      {Array.isArray(images) && images.length > 0 ? (
         images.map((image, index) => (
           <CarouselItemImg
             $fullScreen={fullScreen}
@@ -31,9 +31,9 @@ export const CarouselItems = ({
             alt={name}
           />
         ))
+      ) : typeof images === "string" ? (
+        <CarouselItemImg src={images} />
       ) : (
-        // ) : images.length >= 1 ? (
-        //   <img src={images} />
         <div style={{ color: "#ffffff" }}>No images to display.</div>
       )}
       <ArrowContainer onClick={nextImg}>

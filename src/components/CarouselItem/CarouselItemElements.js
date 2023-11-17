@@ -5,6 +5,7 @@ export const CarouselItemContainer = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  color: #ffffff;
 `;
 
 export const CarouselItemImg = styled.img`
