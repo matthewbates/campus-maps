@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
@@ -10,6 +10,8 @@ import {
 
 import { SidebarItems } from "../SidebarItem";
 import { toggleSidebar } from "../../utils/helpers";
+import { handleClickOutside } from "../../utils/helpers";
+import { SignalCellularNull } from "@mui/icons-material";
 
 export const Sidebar = ({
   isOpen,
@@ -21,6 +23,7 @@ export const Sidebar = ({
   website,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const clickRef = useRef(SignalCellularNull);
 
   return (
     <SidebarContainer $isOpen={isOpen}>

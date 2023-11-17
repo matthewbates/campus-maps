@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { locations } from "./locations";
 
 // handles the search functionality for <Dropdown />
@@ -30,4 +32,19 @@ export const filteredLocations = (
   return displayAllMarkers
     ? locations
     : locations.filter((location) => location.id === selectedLocation);
+};
+
+// handles click events outside of <Sidebar /> when the viewports > 768px
+export const handleClickOutside = (ref, callback) => {
+  const useClickOutside = (e) => {
+    if (!ref.current || !ref.parentNode.contains(e.target)) {
+      callback();
+    }
+    useEffect(() => {
+      window.addEventListener("click", useClickOutside);
+      return () => {
+        window.removeEventListener("click", useClickOutside);
+      };
+    }, [ref, callback]);
+  };
 };

@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { CarouselContainer } from "./CarouselElements";
 import { CarouselItems } from "../CarouselItem";
 
 export const Carousel = ({ fullScreen, images, name }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const clickRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {

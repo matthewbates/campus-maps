@@ -1,14 +1,8 @@
 import { useState } from "react";
 
-import {
-  SidebarItemContainer,
-  SidebarWrapper,
-  SidebarItemAddress,
-  SidebarInfoWrapper,
-} from "./SidebarItemElements";
+import { SidebarItemContainer, SidebarWrapper } from "./SidebarItemElements";
 
 import { Carousel } from "../Carousel";
-import { FullScreen } from "../FullScreen";
 import { Tabs } from "../Tabs";
 
 export const SidebarItems = ({
