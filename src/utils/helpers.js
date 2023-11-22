@@ -35,16 +35,18 @@ export const filteredLocations = (
 };
 
 // handles click events outside of <Sidebar /> when the viewports > 768px
-export const handleClickOutside = (ref, callback) => {
-  const useClickOutside = (e) => {
-    if (!ref.current || !ref.parentNode.contains(e.target)) {
-      callback();
+export const useClickOutside = (ref, handler) => {
+  const listener = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      if (!ref.current.parentNode.contains(e.target)) {
+        handler();
+      }
     }
-    useEffect(() => {
-      window.addEventListener("click", useClickOutside);
-      return () => {
-        window.removeEventListener("click", useClickOutside);
-      };
-    }, [ref, callback]);
   };
+  useEffect(() => {
+    document.addEventListener("mousedown", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+    };
+  }, [ref, handler]);
 };

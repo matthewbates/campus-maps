@@ -33,7 +33,7 @@ export const Map = ({
   }, []);
 
   return isLoaded ? (
-    <div style={{ outline: "none", border: "none" }}>
+    <div>
       <GoogleMap
         options={mapOptions}
         mapContainerStyle={containerStyle}
@@ -53,6 +53,14 @@ export const Map = ({
       </GoogleMap>
     </div>
   ) : (
-    <></>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      Loading...
+    </div>
   );
 };

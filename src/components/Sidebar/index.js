@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
@@ -10,8 +10,7 @@ import {
 
 import { SidebarItems } from "../SidebarItem";
 import { toggleSidebar } from "../../utils/helpers";
-import { handleClickOutside } from "../../utils/helpers";
-import { SignalCellularNull } from "@mui/icons-material";
+import { useClickOutside } from "../../utils/helpers";
 
 export const Sidebar = ({
   isOpen,
@@ -23,10 +22,14 @@ export const Sidebar = ({
   website,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const clickRef = useRef(SignalCellularNull);
+  const sidebarRef = useRef(null);
+
+  useClickOutside(sidebarRef, () => {
+    setIsOpen(false);
+  });
 
   return (
-    <SidebarContainer $isOpen={isOpen}>
+    <SidebarContainer $isOpen={isOpen} ref={sidebarRef}>
       <SidebarWrapper>
         <ArrowCircleLeftIcon
           onMouseOver={() => setIsHovered(true)}
