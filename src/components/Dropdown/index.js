@@ -45,22 +45,6 @@ export const Dropdown = ({ handleMarkerSelection }) => {
             justifyContent: "center",
             alignItems: "center",
           }),
-          option: (baseStyles) => ({
-            ...baseStyles,
-            fontFamily: "Roboto",
-          }),
-          placeholder: (baseStyles) => ({
-            ...baseStyles,
-            fontFamily: "Roboto",
-          }),
-          singleValue: (baseStyles) => ({
-            ...baseStyles,
-            fontFamily: "Arial",
-          }),
-          input: (baseStyles) => ({
-            ...baseStyles,
-            fontFamily: "Roboto",
-          }),
         }}
       />
     </DropdownContainer>

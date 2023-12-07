@@ -6,9 +6,11 @@ export const TabsPanel = ({ children }) => {
       value="2"
       sx={{
         display: "flex",
-        textAlign: "justify",
         flexDirection: "column",
+        textAlign: "justify",
         gap: "1.5em",
+        color: "#ffffff",
+        fontSize: "1.1em",
       }}
     >
       {children}

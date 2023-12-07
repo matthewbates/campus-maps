@@ -128,7 +128,8 @@ export const locations = [
     category: "administrative",
     address: "Buchtel Memorial Tower, Denver, CO 80210",
     coordinates: { lat: 39.677891, lng: -104.960999 },
-    information: "",
+    information:
+      "Buchtel Memorial Tower - located on the south side of campus, east of the Anderson Academic Commons - is all that remains of Buchtel Chapel, which was destroyed by fire in 1983. Originally completed in 1917, the building was first called the Memorial Chapel in honor of DU students who died serving their country during World War I.",
     website: "",
   },
   {

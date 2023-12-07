@@ -7,16 +7,15 @@ export const SidebarContainer = styled.div`
   background: #212121;
   height: 100vh;
   width: 100%;
-  font-family: "Roboto";
   transition: 0.3s ease;
   overflow: auto;
 
-  @media screen and (min-width: 768px) {
-    width: 40%;
+  @media screen and (min-width: 800px) {
+    width: 50%;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 30%;
+    width: 40%;
   }
 `;
 

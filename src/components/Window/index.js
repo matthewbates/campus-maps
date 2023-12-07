@@ -1,6 +1,15 @@
 import { InfoWindowF } from "@react-google-maps/api";
 
-export const Window = ({ coordinates, name }) => {
+import { toggleSidebar } from "../../utils/helpers";
+
+export const Window = ({
+  coordinates,
+  name,
+  isOpen,
+  setIsOpen,
+  id,
+  setSelectedLocation,
+}) => {
   return (
     <InfoWindowF
       position={{ lat: coordinates.lat + 0.0003, lng: coordinates.lng }}
@@ -14,6 +23,14 @@ export const Window = ({ coordinates, name }) => {
         }}
       >
         {name}
+        <button
+          onClick={() => {
+            toggleSidebar(isOpen, setIsOpen);
+            setSelectedLocation(id);
+          }}
+        >
+          More info
+        </button>
       </div>
     </InfoWindowF>
   );

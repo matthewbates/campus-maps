@@ -1,8 +1,4 @@
-import {
-  CarouselItemContainer,
-  CarouselItemImg,
-  ArrowContainer,
-} from "./CarouselItemElements";
+import { CarouselItemContainer, CarouselItemImg } from "./CarouselItemElements";
 
 import { ArrowBack } from "../ArrowBack";
 import { ArrowForward } from "../ArrowForward";
@@ -11,15 +7,16 @@ export const CarouselItems = ({
   images,
   name,
   activeIndex,
-  previousImg,
-  nextImg,
+  setActiveIndex,
   fullScreen,
 }) => {
   return (
     <CarouselItemContainer>
-      <ArrowContainer onClick={previousImg}>
-        <ArrowBack previousImg={previousImg} />
-      </ArrowContainer>
+      <ArrowBack
+        images={images}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
       {Array.isArray(images) && images.length > 0 ? (
         images.map((image, index) => (
           <CarouselItemImg
@@ -36,9 +33,11 @@ export const CarouselItems = ({
       ) : (
         <div style={{ color: "#ffffff" }}>No images to display.</div>
       )}
-      <ArrowContainer onClick={nextImg}>
-        <ArrowForward nextImg={nextImg} />
-      </ArrowContainer>
+      <ArrowForward
+        images={images}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
     </CarouselItemContainer>
   );
 };

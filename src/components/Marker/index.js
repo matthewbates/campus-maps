@@ -8,6 +8,8 @@ import { Window } from "../Window";
 import { locations } from "../../utils/locations";
 import { toggleSidebar, filteredLocations } from "../../utils/helpers";
 
+import LOGO from "../../assets/marker/logo.png";
+
 export const Marker = ({
   map,
   isOpen,
@@ -19,27 +21,27 @@ export const Marker = ({
 }) => {
   const [showInfoWindow, setShowInfoWindow] = useState(null);
 
+  const customLogo = {
+    url: LOGO,
+    scaledSize: new window.google.maps.Size(30, 30),
+  };
+
   return (
     <>
       {filteredLocations(displayAllMarkers, locations, selectedLocation).map(
         ({ id, name, images, address, coordinates, information, website }) => (
           <MarkerF
-            icon={{
-              path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-              fillColor: "white",
-              fillOpacity: 1,
-              scale: 4,
-              strokeColor: "#8a1538",
-            }}
-            onMouseOver={() => {
-              setTimeout(() => setShowInfoWindow(id), 250);
-            }}
-            onMouseOut={() => {
-              setTimeout(() => setShowInfoWindow(null), 2500);
-            }}
+            icon={customLogo}
+            // onMouseOver={() => {
+            //   setTimeout(() => setShowInfoWindow(id), 250);
+            // }}
+            // onMouseOut={() => {
+            //   setTimeout(() => setShowInfoWindow(null), 2500);
+            // }}
             onClick={() => {
-              toggleSidebar(isOpen, setIsOpen);
-              setSelectedLocation(id);
+              setShowInfoWindow(id);
+              // toggleSidebar(isOpen, setIsOpen);
+              // setSelectedLocation(id);
             }}
             key={id}
             position={
@@ -67,7 +69,15 @@ export const Marker = ({
             ) : null}
 
             {showInfoWindow === id && !displayMarker && (
-              <Window coordinates={coordinates} map={map} name={name} />
+              <Window
+                coordinates={coordinates}
+                map={map}
+                name={name}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                id={id}
+                setSelectedLocation={setSelectedLocation}
+              />
             )}
           </MarkerF>
         )

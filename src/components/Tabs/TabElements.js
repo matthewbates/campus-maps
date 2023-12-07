@@ -1,25 +1,17 @@
 import styled from "styled-components";
 
-export const TabWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.25em;
-  color: #ffffff;
-
-  div:nth-child(2) {
-    width: 100%;
-    height: 2px;
-    background: #ffffff;
-  }
+export const InformationDivider = styled.div`
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
 `;
 
-export const TabWrapperItem = styled.div`
+export const TabWebsite = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+`;
 
-  gap: 1.5em;
-
-  a {
-    color: #ffffff;
-  }
+export const TabWebsiteA = styled.a`
+  display: flex;
+  color: #ffffff;
 `;

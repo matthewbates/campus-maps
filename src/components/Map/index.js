@@ -58,6 +58,7 @@ export const Map = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        fontFamily: "Roboto",
       }}
     >
       Loading...

@@ -10,7 +10,7 @@ import {
 
 import { SidebarItems } from "../SidebarItem";
 import { toggleSidebar } from "../../utils/helpers";
-import { useClickOutside } from "../../utils/helpers";
+import { useClickOutside } from "../../utils/hooks";
 
 export const Sidebar = ({
   isOpen,

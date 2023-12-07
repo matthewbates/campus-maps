@@ -1,3 +1,4 @@
+import { ImagesearchRoller } from "@mui/icons-material";
 import { useEffect } from "react";
 
 import { locations } from "./locations";
@@ -34,19 +35,12 @@ export const filteredLocations = (
     : locations.filter((location) => location.id === selectedLocation);
 };
 
-// handles click events outside of <Sidebar /> when the viewports > 768px
-export const useClickOutside = (ref, handler) => {
-  const listener = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
-      if (!ref.current.parentNode.contains(e.target)) {
-        handler();
-      }
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("mousedown", listener);
-    return () => {
-      document.removeEventListener("mousedown", listener);
-    };
-  }, [ref, handler]);
+// toggles <ArrowBack />
+export const previousImg = (images, activeIndex, setActiveIndex) => {
+  setActiveIndex(activeIndex < 1 ? images.length - 1 : activeIndex - 1);
+};
+
+// toggles <ArrowForward />
+export const nextImg = (images, activeIndex, setActiveIndex) => {
+  setActiveIndex(activeIndex === images.length - 1 ? 0 : activeIndex + 1);
 };

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box, Tab } from "@mui/material";
 import { TabContext, TabList } from "@mui/lab";
 
-import { TabWrapper, TabWrapperItem } from "./TabElements";
+import { InformationDivider, TabWebsite, TabWebsiteA } from "./TabElements";
 
 import { FullScreen } from "../FullScreen";
 import { TabsPanel } from "../TabsPanel";
@@ -35,27 +35,23 @@ export const Tabs = ({ address, toggle, information, website }) => {
           <Tab sx={{ color: "white" }} label="Photos" value="1" />
           <Tab sx={{ color: "white" }} label="Information" value="2" />
         </TabList>
-        <FullScreen toggle={toggle} />
+        {/* <FullScreen toggle={toggle} /> */}
       </Box>
       <TabsPanel>
-        <TabWrapper>
-          {information === "" ? (
-            <div>Information coming soon!</div>
-          ) : (
-            <TabWrapperItem>{information}</TabWrapperItem>
-          )}
-          <div></div>
-          <TabWrapperItem>{address}</TabWrapperItem>
-          <TabWrapperItem>
-            {typeof website === "string" && website === "" ? (
-              <>Website coming soon!</>
-            ) : (
-              <a href={website} target={TARGET} rel={REL}>
-                {website}
-              </a>
-            )}
-          </TabWrapperItem>
-        </TabWrapper>
+        {information === "" ? (
+          <div>Information coming soon!</div>
+        ) : (
+          <>{information}</>
+        )}
+        <InformationDivider />
+        <>{address}</>
+        {website !== "" && (
+          <TabWebsite>
+            <TabWebsiteA href={website} target={TARGET} rel={REL}>
+              More information
+            </TabWebsiteA>
+          </TabWebsite>
+        )}
       </TabsPanel>
     </TabContext>
   );

@@ -1,14 +1,8 @@
 import { FormControlLabel, Switch } from "@mui/material";
-import { Reset } from "../Reset";
 
 import { ToggleContainer } from "./ToggleElements";
 
-export const Toggle = ({
-  displayMarker,
-  displayAllMarkers,
-  setDisplayAllMarkers,
-  toggleDisplay,
-}) => {
+export const Toggle = ({ displayMarker, displayAllMarkers, toggleDisplay }) => {
   const toggleLabel = () => {
     if (displayAllMarkers) {
       return displayMarker ? "Hide building" : "Hide buildings";
@@ -22,12 +16,6 @@ export const Toggle = ({
         control={<Switch onChange={toggleDisplay} />}
         label={toggleLabel()}
       ></FormControlLabel>
-      {/* <Reset
-        setDisplayAllMarkers={setDisplayAllMarkers}
-        toggleDisplay={toggleDisplay}
-        variant="contained"
-        sx={{}}
-      /> */}
     </ToggleContainer>
   );
 };
