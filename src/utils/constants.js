@@ -8,8 +8,8 @@ export const mapOptions = {
   zoomControl: false,
   fullscreenControl: false,
   streetViewControl: true,
-  // mapTypeId: "satellite",
-  // rotateControl: true,
+  // allows a mobile user to use one finger to move around the map
+  gestureHandling: "greedy",
   styles: [
     {
       featureType: "all",
@@ -25,7 +25,6 @@ export const mapOptions = {
       elementType: "geometry.fill",
       stylers: [
         {
-          // color: "#ef3340",
           color: "#ffffff",
         },
         {
@@ -50,7 +49,6 @@ export const mapOptions = {
           visibility: "on",
         },
         {
-          // color: "#ef3340",
           color: "#a9a9a9",
         },
       ],

@@ -38,11 +38,7 @@ export const Tabs = ({ address, toggle, information, website }) => {
         {/* <FullScreen toggle={toggle} /> */}
       </Box>
       <TabsPanel>
-        {information === "" ? (
-          <div>Information coming soon!</div>
-        ) : (
-          <>{information}</>
-        )}
+        {information === "" ? <></> : <>{information}</>}
         <InformationDivider />
         <>{address}</>
         {website !== "" && (

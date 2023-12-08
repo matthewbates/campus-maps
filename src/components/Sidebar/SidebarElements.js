@@ -9,6 +9,7 @@ export const SidebarContainer = styled.div`
   width: 100%;
   transition: 0.3s ease;
   overflow: auto;
+  top: 60px;
 
   @media screen and (min-width: 800px) {
     width: 50%;

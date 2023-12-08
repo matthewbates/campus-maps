@@ -5,6 +5,7 @@ import AMMI_HYDE_1 from "../assets/buildings/ammi_hyde_1.jpeg";
 import AMMI_HYDE_2 from "../assets/buildings/ammi_hyde_2.jpeg";
 import BEN_CHARRINGTON_HALL_1 from "../assets/buildings/ben_charrington_hall_1.jpeg";
 import BEN_CHARRINGTON_HALL_2 from "../assets/buildings/ben_charrington_hall_2.jpeg";
+import BEN_CHARRINGTON_HALL_3 from "../assets/buildings/ben_charrington_hall_3.jpeg";
 import BOETTCHER_AUD_1 from "../assets/buildings/boettcher_aud_1.jpeg";
 import BOETTCHER_AUD_2 from "../assets/buildings/boettcher_aud_2.jpeg";
 import BUCHTEL_TOWER_1 from "../assets/buildings/buchtel_tower_1.jpeg";
@@ -13,6 +14,7 @@ import BURWELL_CENTER_1 from "../assets/buildings/burwell_center_1.jpeg";
 import BURWELL_CENTER_2 from "../assets/buildings/burwell_center_2.jpeg";
 import CABLE_CENTER_1 from "../assets/buildings/cable_center_1.jpeg";
 import CABLE_CENTER_2 from "../assets/buildings/cable_center_2.jpeg";
+import CABLE_CENTER_3 from "../assets/buildings/cable_center_3.jpeg";
 import CAMPUS_SAFETY from "../assets/buildings/campus_safety.jpeg";
 import CENTENNIAL_HALLS from "../assets/buildings/centennial_halls.jpeg";
 import CENTENNIAL_TOWERS_1 from "../assets/buildings/centennial_towers_1.jpeg";
@@ -88,7 +90,8 @@ export const locations = [
     category: "administrative",
     address: " 2450 S Vine St, Denver, CO 80210",
     coordinates: { lat: 39.672173, lng: -104.96261 },
-    information: "",
+    information:
+      "Home to the University of Denver Graduate School of Professional Psychology (GSPP) which became one of the first schools in the country to offer a Doctor of Psychology (PsyD) in Clinical Psychology. ",
     website: "https://psychology.du.edu/",
   },
   {
@@ -108,17 +111,23 @@ export const locations = [
     category: "administrative",
     address: "2050 E Iliff Ave, Denver, CO 80210",
     coordinates: { lat: 39.67407, lng: -104.962825 },
-    information: "",
+    information:
+      "At the University of Denver’s Boettcher Center Auditorium, a renovation was done to capitalize on unused auditorium space by reorganizing the space to add two additional classrooms. This re-imagining of space allowed DU to expand their usable space without addition and save then hundreds of thousands of dollars. The renovation also allowed for new accessible bathrooms, renovation of lab spaces, and upgrades to the mechanical, power, and fire protection systems.",
     website: "",
   },
   {
     id: 7,
-    images: [BEN_CHARRINGTON_HALL_1, BEN_CHARRINGTON_HALL_2],
+    images: [
+      BEN_CHARRINGTON_HALL_1,
+      BEN_CHARRINGTON_HALL_2,
+      BEN_CHARRINGTON_HALL_3,
+    ],
     name: "Ben M. Cherrington Hall (BMC)",
     category: "administrative",
     address: "2210 S Gaylord St, Denver, CO 80210",
     coordinates: { lat: 39.675732, lng: -104.961761 },
-    information: "",
+    information:
+      "Constructed in 1966, Cherrington Hall was constructed to house DU's Graduate School of International Studies (GSIS)",
     website: "",
   },
   {
@@ -130,17 +139,19 @@ export const locations = [
     coordinates: { lat: 39.677891, lng: -104.960999 },
     information:
       "Buchtel Memorial Tower - located on the south side of campus, east of the Anderson Academic Commons - is all that remains of Buchtel Chapel, which was destroyed by fire in 1983. Originally completed in 1917, the building was first called the Memorial Chapel in honor of DU students who died serving their country during World War I.",
-    website: "",
+    website:
+      "https://magazine-archive.du.edu/campus-community/newly-renovated-buchtel-tower-honors-military-veterans/",
   },
   {
     id: 9,
-    images: [CABLE_CENTER_1, CABLE_CENTER_2],
+    images: [CABLE_CENTER_1, CABLE_CENTER_2, CABLE_CENTER_3],
     name: "Cable Center (CABLE)",
     category: "administrative",
-    address: "1984 Buchtel Blvd S, Denver, CO 80210, USA",
+    address: "2000 Buchtel Blvd S, Denver, CO 80210, USA",
     coordinates: { lat: 39.683323, lng: -104.963661 },
-    information: "",
-    website: "",
+    information:
+      "The Cable Center's bright and modern ambiance and variety of flexible spaces make it a stunning setting for any event. With 2-stories of floor-to-ceiling windows that capture beautiful, natural light, you'll be greeted by our siguature video tower surrounded by our iconic goble-inspired terrazzo floor.",
+    website: "https://cablecenterevents.org/",
   },
   {
     id: 10,
