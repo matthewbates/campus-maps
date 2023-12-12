@@ -151,7 +151,7 @@ export const locations = [
     coordinates: { lat: 39.683323, lng: -104.963661 },
     information:
       "The Cable Center's bright and modern ambiance and variety of flexible spaces make it a stunning setting for any event. With 2-stories of floor-to-ceiling windows that capture beautiful, natural light, you'll be greeted by our siguature video tower surrounded by our iconic goble-inspired terrazzo floor.",
-    website: "https://cablecenterevents.org/",
+    website: "",
   },
   {
     id: 10,
