@@ -4,7 +4,9 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 import { Marker } from "../Marker";
 
+import { Geolocation } from "../Geolocation";
 import { containerStyle, mapOptions } from "../../utils/constants";
+import useGeolocation from "../../utils/hooks";
 
 export const Map = ({
   displayMarker,
@@ -32,15 +34,19 @@ export const Map = ({
     setMap(null);
   }, []);
 
+  const currentPosition = useGeolocation();
+
   return isLoaded ? (
     <div>
       <GoogleMap
         options={mapOptions}
         mapContainerStyle={containerStyle}
-        center={center}
+        // center={center}
+        center={currentPosition}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
+        {<Geolocation position={currentPosition} />}
         <Marker
           map={map}
           isOpen={isOpen}

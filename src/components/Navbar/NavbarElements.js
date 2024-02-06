@@ -5,16 +5,9 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
   background: white;
   top: 0;
-  height: 60px;
-  position: sticky;
-  z-index: 2; */
-
-  /* @media screen and (max-width: 600px) {
-    flex-direction: column;
-  } */
+  width: 100%;
+  position: fixed; /* Ensures Navbar stays fixed at the top */
+  z-index: 1000; /* Ensures Navbar appears above the map */
 `;

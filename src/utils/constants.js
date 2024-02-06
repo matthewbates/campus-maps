@@ -3,7 +3,7 @@ export const containerStyle = {
 };
 
 export const mapOptions = {
-  zoom: 15.5,
+  zoom: 16.5,
   mapTypeControl: false,
   zoomControl: false,
   fullscreenControl: false,
