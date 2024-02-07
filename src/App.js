@@ -16,9 +16,13 @@ const App = () => {
     setSelectedLocation(!selectedLocation);
   };
 
+  // const handleMarkerSelection = (id) => {
+  //   const selectedMarker = locations.find((location) => location.id === id);
+  //   setDisplayMarker(selectedMarker);
+  // };
+
   const handleMarkerSelection = (id) => {
-    const selectedMarker = locations.find((location) => location.id === id);
-    setDisplayMarker(selectedMarker);
+    return locations.find((location) => location.id === id);
   };
 
   return (

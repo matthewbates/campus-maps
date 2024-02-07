@@ -41,9 +41,6 @@ export const Dropdown = ({ handleMarkerSelection }) => {
           control: (baseStyles) => ({
             ...baseStyles,
             width: selectWidth,
-            // height: "2.5em",
-            // justifyContent: "center",
-            // alignItems: "center",
           }),
         }}
       />

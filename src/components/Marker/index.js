@@ -40,7 +40,7 @@ export const Marker = ({
             // }}
             onClick={() => {
               setShowInfoWindow(id);
-              // toggleSidebar(isOpen, setIsOpen);
+              toggleSidebar(isOpen, setIsOpen);
               setSelectedLocation(id);
             }}
             key={id}
@@ -53,7 +53,7 @@ export const Marker = ({
                 : { lat: coordinates.lat, lng: coordinates.lng }
             }
           >
-            {(displayMarker && displayMarker.id === id) ||
+            {/* {(displayMarker && displayMarker.id === id) ||
             (selectedLocation === id && !displayMarker) ? (
               <Sidebar
                 name={name}
@@ -66,7 +66,7 @@ export const Marker = ({
                 displayMarker={displayMarker}
                 selectedLocation={selectedLocation}
               />
-            ) : null}
+            ) : null} */}
             {showInfoWindow === id && (
               <Window
                 coordinates={coordinates}
