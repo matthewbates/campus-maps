@@ -14,6 +14,13 @@ export const Carousel = ({ fullScreen, images, name }) => {
   //   return () => clearInterval(interval);
   // }, [activeIndex]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === images.length - 1 ? 0 : activeIndex + 1);
+    }, 2050);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+
   return (
     <CarouselContainer>
       <CarouselItems
