@@ -4,13 +4,14 @@ import { ArrowBack } from "../ArrowBack";
 import { ArrowForward } from "../ArrowForward";
 
 export const CarouselItems = ({
+  fullScreen,
   images,
   name,
   activeIndex,
   setActiveIndex,
 }) => {
   return (
-    <CarouselItemContainer>
+    <CarouselItemContainer fullScreen={fullScreen}>
       <ArrowBack
         images={images}
         activeIndex={activeIndex}
@@ -19,6 +20,7 @@ export const CarouselItems = ({
       {Array.isArray(images) && images.length > 0 ? (
         images.map((image, index) => (
           <CarouselItemImg
+            fullScreen={fullScreen}
             $activeIndex={activeIndex}
             $index={index}
             key={index}

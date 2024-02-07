@@ -8,7 +8,8 @@ export const CarouselItemContainer = styled.div`
 `;
 
 export const CarouselItemImg = styled.img`
-  width: 500px;
+  width: 450px;
+  height: 200px;
   object-fit: cover;
   display: ${({ $index, $activeIndex }) =>
     $index === $activeIndex ? "block" : "none"};

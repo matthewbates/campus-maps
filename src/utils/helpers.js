@@ -1,6 +1,3 @@
-import { ImagesearchRoller } from "@mui/icons-material";
-import { useEffect } from "react";
-
 import { locations } from "./locations";
 
 // handles the search functionality for <Dropdown />
@@ -43,4 +40,9 @@ export const previousImg = (images, activeIndex, setActiveIndex) => {
 // toggles <ArrowForward />
 export const nextImg = (images, activeIndex, setActiveIndex) => {
   setActiveIndex(activeIndex === images.length - 1 ? 0 : activeIndex + 1);
+};
+
+// toggles between fullscreen for building images
+export const toggleFullScreen = (fullScreen, setFullScreen) => {
+  setFullScreen(!fullScreen);
 };

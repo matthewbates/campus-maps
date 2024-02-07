@@ -1,3 +1,6 @@
+export const TARGET = "_blank";
+export const REL = "noopener noreferrer";
+
 export const containerStyle = {
   height: "100vh",
 };

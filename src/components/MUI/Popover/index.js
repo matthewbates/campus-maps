@@ -43,23 +43,7 @@ export const Popover = ({ name, images, address, information, website }) => {
       >
         more information
       </MuiButton>
-      <MuiPopover
-        // anchorReference="none"
-        // sx={{
-        //   width: "500px",
-        //   position: "absolute",
-        //   top: "50%",
-        //   left: "50%",
-        //   transform: "translate(-50%, -50%)",
-        // }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-      >
+      <MuiPopover open={open} anchorEl={anchorEl} onClose={handleClose}>
         <Tabs
           images={images}
           name={name}
