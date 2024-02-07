@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InformationDivider = styled.div`
   height: 2px;
   width: 100%;
-  background: #ffffff;
+  background: black;
 `;
 
 export const TabWebsite = styled.div`
@@ -13,5 +13,4 @@ export const TabWebsite = styled.div`
 
 export const TabWebsiteA = styled.a`
   display: flex;
-  color: #ffffff;
 `;

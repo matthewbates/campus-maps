@@ -8,7 +8,6 @@ export const CarouselItems = ({
   name,
   activeIndex,
   setActiveIndex,
-  fullScreen,
 }) => {
   return (
     <CarouselItemContainer>
@@ -20,7 +19,6 @@ export const CarouselItems = ({
       {Array.isArray(images) && images.length > 0 ? (
         images.map((image, index) => (
           <CarouselItemImg
-            $fullScreen={fullScreen}
             $activeIndex={activeIndex}
             $index={index}
             key={index}

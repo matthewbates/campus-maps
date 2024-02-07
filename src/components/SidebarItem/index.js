@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { SidebarItemContainer, SidebarWrapper } from "./SidebarItemElements";
 
 import { Carousel } from "../Carousel";
@@ -12,19 +10,13 @@ export const SidebarItems = ({
   information,
   website,
 }) => {
-  const [fullScreen, setFullScreen] = useState(false);
-
-  const toggleFullScreen = () => {
-    setFullScreen(!fullScreen);
-  };
-
   return (
     <SidebarItemContainer>
       <SidebarWrapper>
-        <Carousel fullScreen={fullScreen} images={images} name={name} />
+        <Carousel images={images} name={name} />
         <Tabs
           images={images}
-          toggle={toggleFullScreen}
+          name={name}
           address={address}
           information={information}
           website={website}

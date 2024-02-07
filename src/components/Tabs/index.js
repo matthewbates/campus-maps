@@ -1,17 +1,20 @@
 import { useState } from "react";
 
 import { Box, Tab } from "@mui/material";
-import { TabContext, TabList } from "@mui/lab";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
 
-import { InformationDivider, TabWebsite, TabWebsiteA } from "./TabElements";
-
-import { FullScreen } from "../FullScreen";
-import { TabsPanel } from "../TabsPanel";
+import { Carousel } from "../Carousel";
 
 const TARGET = "_blank";
 const REL = "noopener noreferrer";
 
-export const Tabs = ({ address, toggle, information, website }) => {
+export const Tabs = ({
+  images,
+  name,
+  address,
+  information,
+  website,
+}) => {
   const [tabValue, setTabValue] = useState("1");
 
   const handleChange = (e, newValue) => {
@@ -22,33 +25,37 @@ export const Tabs = ({ address, toggle, information, website }) => {
       <Box
         sx={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          gap: "2em",
-          justifyContent: "center",
         }}
       >
+        <Carousel images={images} name={name} />
         <TabList
+          sx={{ marginBottom: "0.5em" }}
           selectionFollowsFocus
           onChange={handleChange}
-          aria-label="tab list"
         >
-          <Tab sx={{ color: "white" }} label="Photos" value="1" />
-          <Tab sx={{ color: "white" }} label="Information" value="2" />
+          <Tab label="Photos" value="1" />
+          <Tab label="Information" value="2" />
         </TabList>
-        {/* <FullScreen toggle={toggle} /> */}
+        <TabPanel value="2">
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              width: "400px",
+            }}
+          >
+            {information}
+          </Box>
+          <Box sx={{ marginTop: "1em" }}>{address}</Box>
+          <div style={{ marginTop: "1em" }}>
+            <a href={website} target={TARGET} rel={REL}>
+              Visit website
+            </a>
+          </div>
+        </TabPanel>
       </Box>
-      <TabsPanel>
-        {information === "" ? <></> : <>{information}</>}
-        <InformationDivider />
-        <>{address}</>
-        {website !== "" && (
-          <TabWebsite>
-            <TabWebsiteA href={website} target={TARGET} rel={REL}>
-              More information
-            </TabWebsiteA>
-          </TabWebsite>
-        )}
-      </TabsPanel>
     </TabContext>
   );
 };

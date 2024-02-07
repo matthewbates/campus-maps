@@ -1,12 +1,19 @@
 import { InfoWindowF } from "@react-google-maps/api";
 
-import { WindowItems } from "./WindowElements";
+import { WindowContainer, BuildingName } from "./WindowElements";
+import { Button } from "../MUI/Button";
 
 import { toggleSidebar } from "../../utils/helpers";
+import { Popover } from "../MUI/Popover";
+import { WebStories } from "@mui/icons-material";
 
 export const Window = ({
   coordinates,
   name,
+  images,
+  address,
+  information,
+  website,
   isOpen,
   setIsOpen,
   id,
@@ -14,28 +21,15 @@ export const Window = ({
 }) => {
   return (
     <InfoWindowF position={{ lat: coordinates.lat, lng: coordinates.lng }}>
-      <WindowItems>
-        {name}
-        <button></button>
-        {/* <div
-        style={{
-          fontWeight: "bold",
-          padding: "0.5em",
-          fontSize: "16px",
-          fontFamily: "Roboto",
-        }}
-      >
-        {name}
-        <button
-          onClick={() => {
-            toggleSidebar(isOpen, setIsOpen);
-            setSelectedLocation(id);
-          }}
-        >
-          More info
-        </button>
-      </div> */}
-      </WindowItems>
+      <WindowContainer>
+        <Popover
+          name={name}
+          images={images}
+          address={address}
+          information={information}
+          website={website}
+        />
+      </WindowContainer>
     </InfoWindowF>
   );
 };

@@ -19,7 +19,7 @@ export const Marker = ({
   selectedLocation,
   setSelectedLocation,
 }) => {
-  // const [showInfoWindow, setShowInfoWindow] = useState(null);
+  const [showInfoWindow, setShowInfoWindow] = useState(null);
 
   const customLogo = {
     url: LOGO,
@@ -39,8 +39,8 @@ export const Marker = ({
             //   setTimeout(() => setShowInfoWindow(null), 2500);
             // }}
             onClick={() => {
-              // setShowInfoWindow(id);
-              toggleSidebar(isOpen, setIsOpen);
+              setShowInfoWindow(id);
+              // toggleSidebar(isOpen, setIsOpen);
               setSelectedLocation(id);
             }}
             key={id}
@@ -67,18 +67,21 @@ export const Marker = ({
                 selectedLocation={selectedLocation}
               />
             ) : null}
-
-            {/* {showInfoWindow === id && ( */}
-              {/* <Window
+            {showInfoWindow === id && (
+              <Window
                 coordinates={coordinates}
+                images={images}
+                address={address}
+                information={information}
+                website={website}
                 map={map}
                 name={name}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 id={id}
                 setSelectedLocation={setSelectedLocation}
-              /> */}
-            {/* )} */}
+              />
+            )}
           </MarkerF>
         )
       )}

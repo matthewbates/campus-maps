@@ -9,7 +9,6 @@ export const SidebarItemContainer = styled.div`
 export const SidebarWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
   gap: 1em;
   padding: 1em;
 `;

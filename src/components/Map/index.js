@@ -22,9 +22,11 @@ export const Map = ({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
 
+  const currentPosition = useGeolocation();
   const center = displayMarker
     ? { lat: displayMarker.coordinates.lat, lng: displayMarker.coordinates.lng }
-    : { lat: 39.677982, lng: -104.961877 };
+    : // : { lat: 39.677982, lng: -104.961877 };
+      currentPosition;
 
   const onLoad = useCallback((map) => {
     setMap(map);
@@ -34,40 +36,29 @@ export const Map = ({
     setMap(null);
   }, []);
 
-  const currentPosition = useGeolocation();
-
-  return isLoaded ? (
-    <div>
-      <GoogleMap
-        options={mapOptions}
-        mapContainerStyle={containerStyle}
-        // center={center}
-        center={currentPosition}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        {<Geolocation position={currentPosition} />}
-        <Marker
-          map={map}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          displayMarker={displayMarker}
-          displayAllMarkers={displayAllMarkers}
-          selectedLocation={selectedLocation}
-          setSelectedLocation={setSelectedLocation}
-        />
-      </GoogleMap>
-    </div>
-  ) : (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Roboto",
-      }}
-    >
-      Loading...
-    </div>
+  return (
+    isLoaded && (
+      <div>
+        <GoogleMap
+          options={mapOptions}
+          mapContainerStyle={containerStyle}
+          center={center}
+          // center={currentPosition}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+        >
+          {currentPosition && <Geolocation position={currentPosition} />}
+          <Marker
+            map={map}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            displayMarker={displayMarker}
+            displayAllMarkers={displayAllMarkers}
+            selectedLocation={selectedLocation}
+            setSelectedLocation={setSelectedLocation}
+          />
+        </GoogleMap>
+      </div>
+    )
   );
 };
