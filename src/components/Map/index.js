@@ -25,8 +25,8 @@ export const Map = ({
   const currentPosition = useGeolocation();
   const center = displayMarker
     ? { lat: displayMarker.coordinates.lat, lng: displayMarker.coordinates.lng }
-    : // : { lat: 39.677982, lng: -104.961877 };
-      currentPosition;
+    : { lat: 39.677982, lng: -104.961877 };
+  // : currentPosition;
 
   const onLoad = useCallback((map) => {
     setMap(map);
