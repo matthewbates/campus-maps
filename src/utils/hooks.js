@@ -15,6 +15,7 @@ export const useClickOutside = (ref, callback) => {
   }, [ref, callback]);
 };
 
+// edit this portion since Pathify wont allow for iframed geolocation services
 export default function useGeolocation() {
   const [currentPosition, setCurrentPosition] = useState(null);
 
